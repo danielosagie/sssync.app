@@ -8,8 +8,8 @@ import { Provider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Stack Template",
-  description: "A Multi-tenant Next.js Starter Template",
+  title: "sssync.app",
+  description: "The easiest way to sync inventory across your marketplaces & create your own shared inventory marketplace",
 };
 
 export default function RootLayout({

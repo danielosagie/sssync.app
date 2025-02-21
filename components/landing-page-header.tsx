@@ -40,6 +40,7 @@ function SignInSignUpButtons() {
   );
 }
 
+
 function AuthButtonsInner() {
   const user = useUser();
 
