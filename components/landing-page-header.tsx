@@ -9,6 +9,8 @@ import * as React from "react";
 import { ColorModeSwitcher } from "./color-mode-switcher";
 import { Logo } from "./logo";
 import { Button, buttonVariants } from "./ui/button";
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 interface NavProps {
   items?: {
@@ -40,29 +42,41 @@ function SignInSignUpButtons() {
   );
 }
 
-
-function AuthButtonsInner() {
-  const user = useUser();
-
-  if (user) {
-    return (
-      <Link
-        href="/dashboard"
-        className={buttonVariants({ variant: "default" })}
-      >
-        Dashboard
-      </Link>
-    );
-  } else {
-    return <SignInSignUpButtons />;
-  }
-}
-
 function AuthButtons() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null; // Return null during server-side rendering
+  }
+
+  const figmaSignInLink = "https://www.figma.com/proto/0p7y0hGDDd9a2EdziZMiLb/ACSM-Style-Guide?page-id=642%3A470&node-id=934-4640&viewport=2026%2C-2680%2C0.57&t=wuZP7xZENApPsQFA-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=934%3A4640";
+  const figmaSignUpLink = "https://www.figma.com/proto/0p7y0hGDDd9a2EdziZMiLb/ACSM-Style-Guide?page-id=642%3A470&node-id=934-4640&viewport=2026%2C-2680%2C0.57&t=wuZP7xZENApPsQFA-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=934%3A4640";
+
   return (
-    <React.Suspense fallback={<SignInSignUpButtons />}>
-      <AuthButtonsInner />
-    </React.Suspense>
+    <div className="flex gap-2">
+      <Button asChild>
+        <a 
+          href={figmaSignInLink} 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          Sign In
+        </a>
+      </Button>
+      <Button variant="outline" asChild>
+        <a 
+          href={figmaSignUpLink} 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          Sign Up
+        </a>
+      </Button>
+    </div>
   );
 }
 
@@ -128,10 +142,6 @@ export function LandingPageHeader(props: NavProps) {
     <header className="fixed w-full z-50 bg-background/80 px-4 md:px-8 backdrop-blur">
       <div className="flex h-18 items-center justify-between py-4">
         <div className="flex items-center gap-4 md:gap-10">
-          <Logo className="hidden md:flex" />
-
-          {props.items?.length ? <DesktopItems items={props.items} /> : null}
-
           <Button
             className="space-x-2 md:hidden"
             variant="ghost"
@@ -145,7 +155,29 @@ export function LandingPageHeader(props: NavProps) {
             )}
           </Button>
 
-          <Logo className="md:hidden" />
+          <Link href="/" className="flex items-center gap-2 sm:hidden">
+            <Image
+              src="/assets/sssv2.svg"
+              alt="sssync logo"
+              width={24}
+              height={24}
+              className="mr-1"
+            />
+            <span className="font-bold text-lg">sssync</span>
+          </Link>
+          
+          <Link href="/" className="hidden sm:flex items-center gap-2">
+            <Image
+              src="/assets/sssv2.svg"
+              alt="sssync logo"
+              width={24}
+              height={24}
+              className="mr-1"
+            />
+            <span className="font-bold text-lg">sssync</span>
+          </Link>
+          
+          {props.items?.length ? <DesktopItems items={props.items} /> : null}
 
           {showMobileMenu && props.items && <MobileItems items={props.items} />}
         </div>

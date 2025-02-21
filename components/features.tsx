@@ -41,9 +41,20 @@ export function FeatureGrid(props: {
         </p>
       </div>
 
-      <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-5xl md:grid-cols-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {props.items.map((item, index) => (
-          <FeatureGridItem key={index} {...item} />
+          <div 
+            key={index}
+            className="p-6 rounded-lg border bg-background shadow-sm min-h-[300px] flex flex-col justify-between"
+          >
+            <div className="space-y-4">
+              <div className="flex items-center justify-center h-16 w-16 bg-green-50 rounded-lg">
+                {item.icon}
+              </div>
+              <h3 className="text-xl font-semibold">{item.title}</h3>
+              <p className="text-muted-foreground">{item.description}</p>
+            </div>
+          </div>
         ))}
       </div>
     </section>

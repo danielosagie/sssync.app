@@ -59,7 +59,7 @@ export default async function IndexPage() {
       />
       */}
 
-      
+
 
       <div id="features" />
       <FadeInSection>
@@ -147,7 +147,7 @@ export default async function IndexPage() {
                 "Premium support",
                 "Lowest convenience fees",
               ],
-              buttonText: "Get Started",
+              buttonText: "Start Free Trial",
               buttonHref: "/onboarding?source=growth_plan",
             },
           ]}

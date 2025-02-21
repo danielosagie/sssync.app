@@ -8,8 +8,16 @@ import { Provider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "sssync.app",
+  title: "sssync - Inventory Marketplace",
   description: "The easiest way to sync inventory across your marketplaces & create your own shared inventory marketplace",
+  icons: {
+    icon: '/assets/favicon.ico',
+  },
+  openGraph: {
+    title: "sssync - Inventory Marketplace",
+    description: "The easiest way to sync inventory across your marketplaces & create your own shared inventory marketplace",
+    images: "/assets/landing_page_sssync.png",
+  },
 };
 
 export default function RootLayout({

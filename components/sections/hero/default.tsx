@@ -35,23 +35,27 @@ export default function Hero() {
           </FadeInSection>
           
           <FadeInSection delay={0.1}>
-            <h1 className="relative z-10 inline-block animate-appear bg-gradient-to-r from-foreground to-foreground bg-clip-text text-4xl font-semibold leading-tight text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-6xl md:leading-tight dark:to-muted-foreground">
-              Never Lose A Sale: Sync Inventory & Build Your Own Supply Network
+            <h1 className="m-1 relative z-10 inline-block animate-appear bg-gradient-to-r from-foreground to-foreground bg-clip-text text-xl font-semibold leading-tight text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-6xl md:leading-tight dark:to-muted-foreground">
+              <span className="font-semibold text-lime-600 underline">
+                Sell On Any Marketplace:   
+              </span> 
+              <br />
+              Build Your Own Supply & Fulfillment Network
             </h1>
           </FadeInSection>
 
           <FadeInSection delay={0.2}>
-            <p className="text-md relative z-10 max-w-[550px] animate-appear font-medium text-muted-foreground sm:text-xl">
-              Seamlessly update your inventory and join a trusted marketplace of merchants to ensure every order is fulfilled&mdash;even when you&apos;re out of stock.
+            <p className="m-1 text-sm relative z-10 max-w-[550px] animate-appear font-medium text-muted-foreground sm:text-xl">
+              Never lose another sale. Seamlessly update your inventory and join a trusted marketplace of merchants to ensure every order is fulfilled&mdash;even when you&apos;re out of stock.
             </p>
           </FadeInSection>
 
           <FadeInSection delay={0.3}>
-            <div className="relative z-10 flex justify-center gap-4">
-              <Button variant="default" size="lg" asChild>
-                <a href="/onboarding?source=hero_cta">Get Started For Free</a>
+            <div className="relative z-10 flex flex-col justify-center items-center gap-4 w-full sm:w-auto">
+              <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
+                <a href="/onboarding?source=hero_cta">Learn More</a>
               </Button>
-              <Button variant="outline" size="lg" asChild>
+              <Button variant="default" className="bg-lime-600 w-full sm:w-auto" size="lg" asChild>
                 <a href="/onboarding?source=marketplace_cta">
                   <Store className="mr-2 h-4 w-4" /> Join Marketplace
                 </a>
