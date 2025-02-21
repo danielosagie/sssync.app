@@ -51,11 +51,21 @@ export default function Hero() {
           </FadeInSection>
 
           <FadeInSection delay={0.3}>
-            <div className="relative z-10 flex flex-col justify-center items-center gap-4 w-full sm:w-auto">
-              <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
+            <div className="relative z-10 flex flex-col md:flex-row justify-center items-center gap-4 w-full sm:w-auto mx-4 sm:mx-8">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                asChild 
+                className="w-full sm:w-auto text-xs sm:text-sm md:text-base"
+              >
                 <a href="/onboarding?source=hero_cta">Learn More</a>
               </Button>
-              <Button variant="default" className="bg-lime-600 w-full sm:w-auto" size="lg" asChild>
+              <Button 
+                variant="default" 
+                className="bg-lime-600 w-full sm:w-auto text-xs sm:text-sm md:text-base" 
+                size="lg" 
+                asChild
+              >
                 <a href="/onboarding?source=marketplace_cta">
                   <Store className="mr-2 h-4 w-4" /> Join Marketplace
                 </a>
