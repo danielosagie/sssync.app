@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { google } from 'googleapis';
 
 export async function POST(req: Request) {
   try {
@@ -14,88 +15,51 @@ export async function POST(req: Request) {
       source,
     } = body;
 
-    console.log('Attempting to submit to Notion with data:', { businessName, email, plan, source });
+    console.log('Attempting to submit to Google Sheets:', { businessName, email, plan, source });
 
-    // Send to Notion
-    const notionResponse = await fetch(`https://api.notion.com/v1/pages`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${process.env.NOTION_API_KEY}`,
-        'Content-Type': 'application/json',
-        'Notion-Version': '2022-06-28',
+    // Configure Google Sheets
+    const auth = new google.auth.GoogleAuth({
+      credentials: {
+        client_email: process.env.GOOGLE_CLIENT_EMAIL,
+        private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
       },
-      body: JSON.stringify({
-        parent: { database_id: process.env.NOTION_DATABASE_ID },
-        properties: {
-          Name: {
-            title: [
-              {
-                text: {
-                  content: businessName
-                }
-              }
-            ]
-          },
-          Email: {
-            email: email
-          },
-          Phone: {
-            phone_number: phone
-          },
-          Plan: {
-            select: {
-              name: plan || 'Not specified'
-            }
-          },
-          Features: {
-            multi_select: features.map((f: string) => ({ name: f }))
-          },
-          "Other Features": {
-            rich_text: [
-              {
-                text: {
-                  content: otherFeatures || 'None specified'
-                }
-              }
-            ]
-          },
-          "Business Goal": {
-            rich_text: [
-              {
-                text: {
-                  content: businessGoal || ''
-                }
-              }
-            ]
-          },
-          Source: {
-            select: {
-              name: source || 'Direct'
-            }
-          },
-          Status: {
-            status: {
-              name: 'New'
-            }
-          }
-        }
-      })
+      scopes: ['https://www.googleapis.com/auth/spreadsheets'],
     });
 
-    const notionData = await notionResponse.json();
+    const sheets = google.sheets({ version: 'v4', auth });
+    
+    // Prepare the row data
+    const values = [
+      [
+        new Date().toISOString(), // Timestamp
+        businessName,
+        email,
+        phone,
+        plan || 'Not specified',
+        features.join(', '),
+        otherFeatures || 'None',
+        businessGoal,
+        source || 'Direct',
+      ],
+    ];
 
-    if (!notionResponse.ok) {
-      console.error('Notion API Error:', {
-        status: notionResponse.status,
-        statusText: notionResponse.statusText,
-        data: notionData
-      });
-      throw new Error(`Notion API Error: ${notionData.message || 'Unknown error'}`);
+    // Append to Google Sheet
+    const response = await sheets.spreadsheets.values.append({
+      spreadsheetId: process.env.GOOGLE_SHEET_ID,
+      range: 'Sheet1!A:I', // Assumes first sheet and columns A through I
+      valueInputOption: 'USER_ENTERED',
+      requestBody: {
+        values,
+      },
+    });
+
+    if (!response.data) {
+      throw new Error('Failed to submit to Google Sheets');
     }
 
-    console.log('Successfully submitted to Notion');
+    console.log('Successfully submitted to Google Sheets');
 
-    // Also send a notification email
+    // Send notification email
     try {
       const emailResponse = await fetch('https://api.resend.com/emails', {
         method: 'POST',
@@ -122,11 +86,11 @@ export async function POST(req: Request) {
       });
 
       if (!emailResponse.ok) {
-        console.error('Email notification failed but Notion submission succeeded');
+        console.error('Email notification failed but Google Sheets submission succeeded');
       }
     } catch (emailError) {
       console.error('Email error:', emailError);
-      // Don't throw here, as we still want to return success if Notion submission worked
+      // Don't throw here, as we still want to return success if Sheets submission worked
     }
 
     return NextResponse.json({ success: true });

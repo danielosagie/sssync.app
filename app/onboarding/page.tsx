@@ -98,9 +98,9 @@ export default function OnboardingPage() {
               <div className="flex justify-center">
                 <CheckCircle2 className="h-16 w-16 text-green-500" />
               </div>
-              <h2 className="text-2xl font-bold">You're on the waitlist!</h2>
+              <h2 className="text-2xl font-bold">You&apos;re on the waitlist!</h2>
               <p className="text-muted-foreground">
-                We'll reach out as soon as your spot is ready. In the meantime, follow us on Twitter for updates.
+                We&apos;ll reach out as soon as your spot is ready. In the meantime, follow us on Twitter for updates.
               </p>
               <Button asChild variant="outline">
                 <a href="https://twitter.com/sssyncapp" target="_blank" rel="noopener noreferrer">
@@ -213,7 +213,7 @@ export default function OnboardingPage() {
                     </div>
 
                     <div className="space-y-2">
-                      <Label>Any other features you'd like to see?</Label>
+                      <Label>Any other features you&apos;d like to see?</Label>
                       <Textarea
                         placeholder="Tell us about any other features or functionality you'd find valuable..."
                         value={formData.otherFeatures}

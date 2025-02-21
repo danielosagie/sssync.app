@@ -19,7 +19,7 @@ export default function SuccessPage() {
         <CardContent className="space-y-6">
           <div className="text-center space-y-4">
             <p className="text-muted-foreground">
-              We'll review your application and send you an email when you're accepted into the beta program.
+              We&apos;ll review your application and send you an email when you&apos;re accepted into the beta program.
               Keep an eye on your inbox for updates!
             </p>
             <p className="text-muted-foreground">

@@ -42,7 +42,7 @@ export default function Hero() {
 
           <FadeInSection delay={0.2}>
             <p className="text-md relative z-10 max-w-[550px] animate-appear font-medium text-muted-foreground sm:text-xl">
-              Seamlessly update your inventory and join a trusted marketplace of merchants to ensure every order is fulfilled—even when you're out of stock.
+              Seamlessly update your inventory and join a trusted marketplace of merchants to ensure every order is fulfilled&mdash;even when you&apos;re out of stock.
             </p>
           </FadeInSection>
 
