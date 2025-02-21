@@ -51,18 +51,18 @@ export default function Hero() {
           </FadeInSection>
 
           <FadeInSection delay={0.3}>
-            <div className="relative z-10 flex flex-col md:flex-row justify-center items-center gap-4 w-full sm:w-auto mx-4 sm:mx-8">
+            <div className="relative z-10 flex flex-col md:flex-row justify-center items-center gap-4 w-full px-4 sm:px-8">
               <Button 
                 variant="outline" 
                 size="lg" 
                 asChild 
-                className="w-full sm:w-auto text-xs sm:text-sm md:text-base"
+                className="w-full text-xs sm:text-sm md:text-base"
               >
                 <a href="/onboarding?source=hero_cta">Learn More</a>
               </Button>
               <Button 
                 variant="default" 
-                className="bg-lime-600 w-full sm:w-auto text-xs sm:text-sm md:text-base" 
+                className="bg-lime-600 w-full text-xs sm:text-sm md:text-base" 
                 size="lg" 
                 asChild
               >
