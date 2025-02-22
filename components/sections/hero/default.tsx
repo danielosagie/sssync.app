@@ -58,7 +58,7 @@ export default function Hero() {
                 asChild 
                 className="w-full text-xs sm:text-sm md:text-base"
               >
-                <a href="/onboarding?source=hero_cta">Learn More</a>
+                <a href="/onboarding?source=hero_cta">Try Demo</a>
               </Button>
               <Button 
                 variant="default" 
