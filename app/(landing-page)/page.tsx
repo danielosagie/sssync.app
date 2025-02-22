@@ -12,6 +12,7 @@ import {
 } from "@radix-ui/react-icons";
 import Hero from "@/components/sections/hero/default";
 import { FadeInSection } from "@/components/ui/fade-in-section";
+import { FAQ } from "@/components/sections/faq";
 
 export default async function IndexPage() {
   const project = await stackServerApp.getProject();
@@ -153,6 +154,9 @@ export default async function IndexPage() {
           ]}
         />
       </FadeInSection>
+
+      <div id="faq" />
+      <FAQ />
     </>
   );
 }
