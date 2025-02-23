@@ -47,7 +47,7 @@ export default function Hero() {
                 href="/onboarding?source=learn_more"
                 className="flex items-center gap-1"
               >
-                Join Beta
+                Learn More
                 <ArrowRightIcon className="h-3 w-3" />
               </a>
             </Badge>
@@ -57,7 +57,7 @@ export default function Hero() {
             <FadeInSection delay={0.1}>
               <div className="flex flex-col text-center items-center">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-lime-600 mb-3 sm:mb-4">
-                  Partner, Sync & Fulfill
+                  Sync, Partner, & Fulfill
                 </h1>
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-black dark:text-white mb-4 sm:mb-6">
                   Inventory Sync & Shared Marketplace for Ecommerce
