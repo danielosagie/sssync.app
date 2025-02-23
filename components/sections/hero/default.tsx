@@ -76,7 +76,7 @@ export default function Hero() {
                   asChild 
                   className="w-full sm:w-auto text-xs sm:text-sm md:text-base"
                 >
-                  <a href="/onboarding?source=hero_cta" onClick={handleClick}>Try Demo</a>
+                  <a href="https://www.figma.com/proto/0p7y0hGDDd9a2EdziZMiLb/ACSM-Style-Guide?page-id=642%3A470&node-id=971-28283&viewport=2026%2C-2680%2C0.57&t=wuZP7xZENApPsQFA-1&scaling=scale-down&content-scaling=responsive&starting-point-node-id=934%3A4640" onClick={handleClick}>Try Demo</a>
                 </Button>
                 <Button 
                   variant="default" 
