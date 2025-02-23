@@ -12,6 +12,8 @@ import { FadeInSection } from "@/components/ui/fade-in-section";
 import { useSearchParams } from "next/navigation";
 import { WorldMap } from "@/components/ui/world-map";
 import { motion } from "framer-motion";
+import { usePostHog } from 'posthog-js/react';
+
 
 function WorldMapDemo() {
   return (
@@ -24,13 +26,20 @@ function WorldMapDemo() {
 export default function Hero() {
   const searchParams = useSearchParams();
   const source = searchParams.get("source");
+  const posthog = usePostHog();
+
+  const handleClick = () => {
+    posthog.capture('cta_click', {
+      button: 'primary'
+    });
+  };
 
   return (
-    <Section className="fade-bottom overflow-hidden pb-0 sm:pb-0 md:pb-0 m-5">
-      <div className="mx-auto flex max-w-container flex-col gap-12 pt-16 sm:gap-24">
-        <div className="flex flex-col items-center gap-6 text-center sm:gap-12">
+    <Section className="fade-bottom overflow-hidden pb-0 sm:pb-0 md:pb-0">
+      <div className="mx-auto flex max-w-container flex-col gap-8 pt-8 sm:gap-12 sm:pt-16">
+        <div className="flex flex-col items-center gap-4 text-center sm:gap-6">
           <FadeInSection>
-            <Badge variant="outline" className="animate-appear">
+            <Badge variant="outline" className="animate-appear w-full sm:w-auto">
               <span className="text-muted-foreground">
                 Coming in Private Beta
               </span>
@@ -44,30 +53,30 @@ export default function Hero() {
             </Badge>
           </FadeInSection>
 
-          <div className="space-y-8 w-full">
+          <div className="space-y-6 w-full px-4 sm:px-0">
             <FadeInSection delay={0.1}>
-              <div className="flex flex-col text-left items-center">
-                <h1 className="text-4xl md:text-6xl font-bold text-lime-600 mb-4">
-                  Connect, Sync & Fulfill
+              <div className="flex flex-col text-center items-center">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-lime-600 mb-3 sm:mb-4">
+                  Partner, Sync & Fulfill
                 </h1>
-                <h2 className="text-2xl md:text-4xl font-semibold text-black dark:text-white">
-                  Say Goodbye To Stockouts & Extra Inventory
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-black dark:text-white mb-4 sm:mb-6">
+                  Inventory Sync & Shared Marketplace for Ecommerce
                 </h2>
-                <p className="text-sm md:text-lg text-center text-neutral-500 max-w-2xl mx-auto py-4 px-4">
-                 Build your own supply & fulfillment network to never lose a sale to stockouts again. Seamlessly update your inventory and join a trusted marketplace of merchants to ensure all of your orders are fulfilled&mdash;even when you&apos;re out of stock.
+                <p className="text-sm sm:text-base md:text-lg text-neutral-500 max-w-2xl mx-auto px-2 sm:px-0">
+                Say goodbye To stockouts & extra inventory. Seamlessly sync inventory across <span className="text-darkgrey font-semibold">Shopify</span>, <span className="text-darkgrey font-semibold">Square</span>, <span className="text-darkgrey font-semibold">Clover</span>, <span className="text-darkgrey font-semibold">Amazon</span>, and a <span className="text-darkgrey font-semibold">network of local partners</span>. Keep every store stocked, automate orders/fulfillment, all while saving time & money.
                 </p>
               </div>
             </FadeInSection>
 
             <FadeInSection delay={0.2}>
-              <div className="relative z-10 flex flex-col md:flex-row justify-center items-center gap-4 w-full sm:w-auto mx-4 sm:mx-8">
+              <div className="relative z-10 flex flex-col sm:flex-row justify-center items-center gap-3 w-full sm:w-auto mx-2 sm:mx-8">
                 <Button 
                   variant="outline" 
                   size="lg" 
                   asChild 
                   className="w-full sm:w-auto text-xs sm:text-sm md:text-base"
                 >
-                  <a href="/onboarding?source=hero_cta">Try Demo</a>
+                  <a href="/onboarding?source=hero_cta" onClick={handleClick}>Try Demo</a>
                 </Button>
                 <Button 
                   variant="default" 
@@ -83,7 +92,7 @@ export default function Hero() {
             </FadeInSection>
 
             <FadeInSection delay={0.3}>
-              <div className="py-8 dark:bg-black bg-white w-full rounded-xl">
+              <div className="py-6 sm:py-8 dark:bg-black bg-white w-full rounded-xl">
                 <WorldMap
                   lineColor="#65a30d"
                   dots={[
@@ -118,7 +127,7 @@ export default function Hero() {
           </div>
 
           <FadeInSection delay={0.4}>
-            <div className="relative pt-12">
+            <div className="relative pt-8 sm:pt-12">
               <MockupFrame
                 className="animate-appear"
                 size="small"

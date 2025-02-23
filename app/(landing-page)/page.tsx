@@ -8,14 +8,32 @@ import {
   ReaderIcon, 
   StarIcon,
   DrawingPinIcon,
-  ComponentInstanceIcon
+  ComponentInstanceIcon,
+  RocketIcon,
+  CheckCircledIcon,
 } from "@radix-ui/react-icons";
+import { 
+  Calendar,
+  RefreshCw,
+  Rocket,
+  CheckCircle2,
+  XCircle,
+  BarChart,
+  Share2,
+  Wallet
+} from "lucide-react";
 import Hero from "@/components/sections/hero/default";
 import { FadeInSection } from "@/components/ui/fade-in-section";
 import { FAQ } from "@/components/sections/faq";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Section } from "@/components/ui/section";
+import { UpdateIcon } from "@radix-ui/react-icons";
+import { cookies } from "next/headers";
 
 export default async function IndexPage() {
   const project = await stackServerApp.getProject();
+  const cookieStore = cookies();
   if (!project.config.clientTeamCreationEnabled) {
     return (
       <div className="w-full min-h-96 flex items-center justify-center">
@@ -60,8 +78,6 @@ export default async function IndexPage() {
       />
       */}
 
-
-
       <div id="features" />
       <FadeInSection>
         <FeatureGrid
@@ -101,6 +117,51 @@ export default async function IndexPage() {
           ]}
         />
       </FadeInSection>
+
+      <Section id="why-choose" className="py-24 bg-muted/50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-lime-600 mb-4">
+              Why use <span className="text-black">sssync?</span>
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: (
+                  <div className="flex justify-left mb-4">
+                    <RefreshCw className="h-8 w-8" />
+                  </div>
+                ),
+                title: "Effortless Connectivity",
+                text: "Eliminate manual inventory management and prevent lost sales with our seamless, automated system."
+              },
+              {
+                icon: <RocketIcon className="h-8 w-8" />,
+                title: "Risk-Free Sales Growth",
+                text: "Turn stockouts into opportunities without needing extra inventory."
+              },
+              {
+                icon: <CheckCircledIcon className="h-8 w-8" />,
+                title: "Trust & Transparency",
+                text: "Clear ratings, dispute resolution, and automated processes ensure fair partnerships."
+              },
+              {
+                icon: <BarChart className="h-8 w-8" />,
+                title: "Scalable & Simple",
+                text: "Start with a free tier and upgrade as you grow—our plans meet all business sizes."
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="p-6 bg-background rounded-xl">
+                <div className="mb-4 text-lime-600">{item.icon}</div>
+                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                <p className="text-muted-foreground">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
 
       <div id="pricing" />
       <FadeInSection>
@@ -157,6 +218,59 @@ export default async function IndexPage() {
 
       <div id="faq" />
       <FAQ />
+
+      
+      {/*
+      <Section id="beta-access" className="py-24">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-lime-600 mb-4">
+              Join Our Private Beta
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Experience a smarter way to manage inventory and boost sales without extra stock.
+            </p>
+          </div>
+
+          
+          <div className="bg-background p-8 rounded-xl">
+            <form action="/onboarding" method="GET" className="space-y-6">
+              <div className="grid gap-4">
+                <Input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                  className="w-full"
+                />
+                <input type="hidden" name="source" value="beta_access" />
+                
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button type="submit" className="w-full sm:w-auto">
+                    Get Started for Free
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="w-full sm:w-auto"
+                    asChild
+                  >
+                    <a href="https://cal.com/your-booking-link" target="_blank">
+                      <Calendar className="mr-2 h-4 w-4" />
+                      Book a Demo
+                    </a>
+                  </Button>
+                </div>
+              </div>
+      
+              
+              <p className="text-sm text-muted-foreground text-center">
+                By submitting, you agree to our terms and privacy policy.
+              </p>
+            </form>
+          </div>
+        </div>
+      </Section> 
+      */}
     </>
   );
 }

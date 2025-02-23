@@ -4,10 +4,13 @@ import { Inter } from "next/font/google";
 import { stackServerApp } from "../stack";
 import "./globals.css";
 import { Provider } from "./provider";
+import { PostHogProviderWrapper } from '@/components/providers/posthog';
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://sssync.app' || 'https://www.sssync.app' || 'https://localhost:3000'),
   title: "sssync - Inventory Marketplace",
   description: "The easiest way to sync inventory across your marketplaces & create your own shared inventory marketplace",
   icons: {
@@ -28,11 +31,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <Provider>
-          <StackProvider app={stackServerApp}>
-            <StackTheme>{children}</StackTheme>
-          </StackProvider>
-        </Provider>
+        <Analytics />
+          <PostHogProviderWrapper>
+            <Provider>
+              <StackProvider app={stackServerApp}>
+                <StackTheme>{children}</StackTheme>
+              </StackProvider>
+            </Provider>
+          </PostHogProviderWrapper>
       </body>
     </html>
   );
