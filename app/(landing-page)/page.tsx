@@ -94,12 +94,12 @@ export default async function IndexPage() {
                   <img src="/assets/shopify-logo-svgrepo-com.svg" className="h-10 w-10" />
                   <img src="/assets/WooCommerce_logo.svg" className="h-10 w-10" />
                   <img src="/assets/Square,_Inc._-_Square_logo.svg" className="h-10 w-10" />
-                  <img src="/assets/Etsy_icon.svg" className="h-10 w-10" />
+                  <img src="/assets/Clover-POS-300x300.webp" className="h-10 w-10 rounded-md" />
                   <img src="/assets/Amazon_icon.svg" className="h-10 w-10" />
                 </div>
               ),
               title: "Multi-Platform Inventory Sync",
-              description: "Seamlessly connect and sync inventory across Shopify, WooCommerce, Square, Amazon, and Etsy simultaneously. Real-time updates across all platforms.",
+              description: "Seamlessly connect and sync real-time inventory across Shopify, WooCommerce, Square, Amazon, and Clover simultaneously. Adding more platforms every month.",
             },
             {
               icon: <ShoppingBag className="h-8 w-8" />,
