@@ -167,6 +167,14 @@ const config = {
   				'100%': {
   					opacity: '1'
   				}
+  			},
+  			orbit: {
+  				'0%': {
+  					transform: 'rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg))'
+  				},
+  				'100%': {
+  					transform: 'rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 360deg))'
+  				}
   			}
   		},
   		animation: {
@@ -174,7 +182,8 @@ const config = {
   			'accordion-up': 'accordion-up 0.2s ease-out',
   			appear: 'appear 0.6s forwards ease-out',
   			'appear-zoom': 'appear-zoom 0.6s forwards ease-out',
-  			'pulse-hover': 'pulse-hover 6s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+  			'pulse-hover': 'pulse-hover 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+  			orbit: 'orbit calc(var(--duration)*1s) linear infinite'
   		},
   		fontFamily: {
   			code: [

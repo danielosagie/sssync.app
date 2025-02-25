@@ -48,7 +48,7 @@ export function FeatureGrid(props: {
             className="p-6 rounded-lg border bg-background shadow-sm min-h-[300px] flex flex-col justify-between"
           >
             <div className="space-y-4">
-              <div className="flex items-center justify-center h-16 w-16 bg-green-50 rounded-lg">
+              <div className="w-fit flex items-center justify-center h-16 w-16 bg-green-50 rounded-lg p-5">
                 {item.icon}
               </div>
               <h3 className="text-xl font-semibold">{item.title}</h3>

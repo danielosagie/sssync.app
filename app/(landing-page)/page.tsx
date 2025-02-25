@@ -20,7 +20,10 @@ import {
   XCircle,
   BarChart,
   Share2,
-  Wallet
+  Wallet,
+  GitFork,
+  Truck,
+  ShoppingBag,
 } from "lucide-react";
 import Hero from "@/components/sections/hero/default";
 import { FadeInSection } from "@/components/ui/fade-in-section";
@@ -30,6 +33,7 @@ import { Input } from "@/components/ui/input";
 import { Section } from "@/components/ui/section";
 import { UpdateIcon } from "@radix-ui/react-icons";
 import { cookies } from "next/headers";
+import { OrbitingCircles } from "@/components/magicui/orbiting-circles";
 
 export default async function IndexPage() {
   const project = await stackServerApp.getProject();
@@ -82,39 +86,48 @@ export default async function IndexPage() {
       <FadeInSection>
         <FeatureGrid
           title="Core Features"
-          subtitle="Everything you need to sync inventory and never lose a sale"
+          subtitle="Powerful tools to connect and grow your business network"
           items={[
             {
-              icon: <BarChartIcon className="h-8 w-8" />,
-              title: "Real-Time Inventory Sync",
-              description: "Seamlessly connect with Shopify, Clover, and Square for automatic inventory updates across all channels.",
+              icon: (
+                <div className="w-fit flex items-center justify-center gap-6">
+                  <img src="/assets/shopify-logo-svgrepo-com.svg" className="h-10 w-10" />
+                  <img src="/assets/WooCommerce_logo.svg" className="h-10 w-10" />
+                  <img src="/assets/Square,_Inc._-_Square_logo.svg" className="h-10 w-10" />
+                  <img src="/assets/Etsy_icon.svg" className="h-10 w-10" />
+                  <img src="/assets/Amazon_icon.svg" className="h-10 w-10" />
+                </div>
+              ),
+              title: "Multi-Platform Inventory Sync",
+              description: "Seamlessly connect and sync inventory across Shopify, WooCommerce, Square, Amazon, and Etsy simultaneously. Real-time updates across all platforms.",
             },
             {
-              icon: <LayersIcon className="h-8 w-8" />,
-              title: "Shared Inventory Marketplace",
-              description: "When you're out of stock, orders are automatically matched with nearby partners who have available inventory.",
+              icon: <ShoppingBag className="h-8 w-8" />,
+              title: "Shopify Inventory Widget",
+              description: "Display real-time partner inventory availability directly on your Shopify store. Inventory counts remain private while showing availability status.",
             },
             {
-              icon: <ReaderIcon className="h-8 w-8" />,
-              title: "Transparent Fulfillment",
-              description: "Every shared order is logged with clear details on fulfillment, payouts, and returns.",
+              icon: <GitFork className="h-8 w-8" />,
+              title: "Inventory Sharing & Order Routing",
+              description: "Share inventory between stores and automatically route orders to partners when you're out of stock. Fully automated process.",
             },
             {
               icon: <StarIcon className="h-8 w-8" />,
-              title: "Marketplace Ratings",
-              description: "Build trust with transparent vendor ratings based on fulfillment performance and product quality.",
+              title: "Inventory Marketplace",
+              description: "Buy and sell excess inventory with other merchants. See merchant ratings, nearby location matching, and support for perishable/frozen goods.",
             },
             {
-              icon: <DrawingPinIcon className="h-8 w-8" />,
-              title: "Automated Payouts",
-              description: "Small, fixed convenience fees with clear revenue flow and automated payment processing.",
+              icon: <ReaderIcon className="h-8 w-8" />,
+              title: "Automated Partnerships",
+              description: "From contracts to payouts, we handle all partnership logistics automatically. Focus on growing your business.",
             },
             {
-              icon: <ComponentInstanceIcon className="h-8 w-8" />,
-              title: "Real-Time Widget",
-              description: "Embed a customizable widget on your storefront showing live product availability from the shared network.",
+              icon: <Truck className="h-8 w-8" />,
+              title: "Unified Dashboard",
+              description: "Track orders, fulfillment, and analytics across your entire network in one powerful dashboard.",
             },
           ]}
+          className="border border-gray-300 rounded-lg shadow-sm"
         />
       </FadeInSection>
 
