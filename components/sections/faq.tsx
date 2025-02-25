@@ -65,9 +65,40 @@ export function FAQ() {
                 Returns and exchanges work just like they do now. Customers contact you, and we help coordinate with the fulfillment partner if needed. All return shipping labels and processing are handled automatically through our system to maintain a seamless experience.
               </AccordionContent>
             </AccordionItem>
+
+            <AccordionItem value="item-7">
+              <AccordionTrigger>How does pricing work for marketplace transactions?</AccordionTrigger>
+              <AccordionContent>
+                Our pricing is transparent and based on your tier. For sellers--there is no fee. We charge a small service fee to the customer by adding it to the final price (5-10% depending on your plan). On marketplace transactions - there is a 3% fee. For marketplace operators, there&apos;s a connector fee (1-3%) on transactions facilitated through your marketplace.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-8">
+              <AccordionTrigger>Can I connect multiple e-commerce platforms to sssync?</AccordionTrigger>
+              <AccordionContent>
+                Absolutely! One of our core strengths is multi-platform inventory synchronization. You can connect Shopify, WooCommerce, Square, Amazon, Clover, and more simultaneously. This allows you to manage inventory across all your sales channels from a single dashboard.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-9">
+              <AccordionTrigger>How do you handle shipping costs between partner stores?</AccordionTrigger>
+              <AccordionContent>
+                Shipping costs are calculated automatically based on distance, weight, and carrier rates. These costs are factored into the fulfillment fee that partner stores receive. You can set your preferences for shipping methods and carriers in your dashboard, and even offer local pickup or delivery options.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-10">
+              <AccordionTrigger>Is there a limit to how many partner stores I can connect with?</AccordionTrigger>
+              <AccordionContent>
+                The number of partner connections depends on your plan. Free tier users can connect with up to 2 partners, Pro Marketplace users can connect with up to 30, and Enterprise users have unlimited connections. You can always upgrade your plan as your network grows.
+              </AccordionContent>
+            </AccordionItem>
           </Accordion>
         </div>
       </FadeInSection>
     </Section>
   );
-} 
+}
+
+// Also export as default to fix import conflicts
+export default FAQ; 

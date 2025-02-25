@@ -1,3 +1,4 @@
+import { Header } from "@/components/header";
 import { StackProvider, StackTheme } from "@stackframe/stack";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -7,7 +8,10 @@ import { Provider } from "./provider";
 import { PostHogProviderWrapper } from '@/components/providers/posthog';
 import { Analytics } from "@vercel/analytics/react"
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://sssync.app' || 'https://www.sssync.app' || 'https://localhost:3000'),
@@ -29,16 +33,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+    <html lang="en" suppressHydrationWarning className={inter.className}>
+      <body>
         <Analytics />
-          <PostHogProviderWrapper>
-            <Provider>
-              <StackProvider app={stackServerApp}>
-                <StackTheme>{children}</StackTheme>
-              </StackProvider>
-            </Provider>
-          </PostHogProviderWrapper>
+        <PostHogProviderWrapper>
+          <Provider>
+            <StackProvider app={stackServerApp}>
+              <StackTheme>
+                {children}
+              </StackTheme>
+            </StackProvider>
+          </Provider>
+        </PostHogProviderWrapper>
       </body>
     </html>
   );

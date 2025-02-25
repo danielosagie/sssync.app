@@ -8,16 +8,18 @@ export default function Layout(props: { children: React.ReactNode }) {
         items={[
           { title: "Home", href: "/" },
           { title: "Features", href: "/#features" },
+          { title: "Why sssync?", href: "/#why-choose" },
           { title: "Pricing", href: "/#pricing" },
+          { title: "FAQ", href: "/#faq" },
         ]}
       />
       <main className="flex-1">{props.children}</main>
       <Footer
         builtBy="theacsm.com"
         builtByLink="https://theacsm.com"
-        githubLink="/"
-        twitterLink="/"
-        linkedinLink="https://www.linkedin.com/company/acsm"
+        githubLink=""
+        twitterLink=""
+        linkedinLink="https://www.linkedin.com/company/african-caribbean-food-market"
       />
     </div>
   );

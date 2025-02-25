@@ -1,7 +1,8 @@
+//import { useState } from "react";
 import { FeatureGrid } from "@/components/features";
 //import { Hero } from "@/components/hero";
 import { PricingGrid } from "@/components/pricing";
-import { stackServerApp } from "@/stack";
+import { stackServerApp } from "../../stack";
 import { 
   BarChartIcon, 
   LayersIcon, 
@@ -27,18 +28,36 @@ import {
 } from "lucide-react";
 import Hero from "@/components/sections/hero/default";
 import { FadeInSection } from "@/components/ui/fade-in-section";
-import { FAQ } from "@/components/sections/faq";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Section } from "@/components/ui/section";
 import { UpdateIcon } from "@radix-ui/react-icons";
 import { cookies } from "next/headers";
 import { OrbitingCircles } from "@/components/magicui/orbiting-circles";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Image from 'next/image';
+import dynamic from 'next/dynamic'
+import { Skeleton } from "@/components/ui/skeleton";
+import { Suspense } from "react";
+import { WhyChooseSection } from "@/components/sections/whychooseus";
 
-export default async function IndexPage() {
-  const project = await stackServerApp.getProject();
-  const cookieStore = cookies();
-  if (!project.config.clientTeamCreationEnabled) {
+// Lazy load components that are below the fold
+const DynamicPricingTabs = dynamic(() => import('@/components/pricing-tabs').then(mod => mod.PricingTabs), {
+  loading: () => <div className="h-96 animate-pulse bg-muted/50 rounded-lg"></div>
+})
+
+const DynamicFAQ = dynamic(() => import('@/components/sections/faq').then(mod => mod.default || mod.FAQ))
+
+async function LandingPage() {
+  let showSetupRequired = false;
+  try {
+    const project = await stackServerApp.getProject();
+    showSetupRequired = project.config && !project.config.clientTeamCreationEnabled;
+  } catch (error) {
+    console.error("Error accessing project configuration:", error);
+  }
+
+  if (showSetupRequired) {
     return (
       <div className="w-full min-h-96 flex items-center justify-center">
         <div className="max-w-xl gap-4">
@@ -91,11 +110,41 @@ export default async function IndexPage() {
             {
               icon: (
                 <div className="w-fit flex items-center justify-center gap-6">
-                  <img src="/assets/shopify-logo-svgrepo-com.svg" className="h-10 w-10" />
-                  <img src="/assets/WooCommerce_logo.svg" className="h-10 w-10" />
-                  <img src="/assets/Square,_Inc._-_Square_logo.svg" className="h-10 w-10" />
-                  <img src="/assets/Clover-POS-300x300.webp" className="h-10 w-10 rounded-md" />
-                  <img src="/assets/Amazon_icon.svg" className="h-10 w-10" />
+                  <Image 
+                    src="/assets/shopify-logo-svgrepo-com.svg" 
+                    width={40} 
+                    height={40} 
+                    alt="Shopify"
+                    priority={true}
+                  />
+                  <Image 
+                    src="/assets/WooCommerce_logo.svg" 
+                    width={40} 
+                    height={40} 
+                    alt="WooCommerce"
+                    priority={true}
+                  />
+                  <Image 
+                    src="/assets/Square,_Inc._-_Square_logo.svg" 
+                    width={40} 
+                    height={40} 
+                    alt="Square"
+                    priority={true}
+                  />
+                  <Image 
+                    src="/assets/Clover-POS-300x300.webp" 
+                    width={40} 
+                    height={40} 
+                    alt="Clover"
+                    priority={true}
+                  />
+                  <Image 
+                    src="/assets/Amazon_icon.svg" 
+                    width={40} 
+                    height={40} 
+                    alt="Amazon"
+                    priority={true}
+                  />
                 </div>
               ),
               title: "Multi-Platform Inventory Sync",
@@ -127,110 +176,34 @@ export default async function IndexPage() {
               description: "Track orders, fulfillment, and analytics across your entire network in one powerful dashboard.",
             },
           ]}
-          className="border border-gray-300 rounded-lg shadow-sm"
         />
       </FadeInSection>
 
-      <Section id="why-choose" className="py-24 bg-muted/50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-lime-600 mb-4">
-              Why use <span className="text-black">sssync?</span>
-            </h2>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: (
-                  <div className="flex justify-left mb-4">
-                    <RefreshCw className="h-8 w-8" />
-                  </div>
-                ),
-                title: "Effortless Connectivity",
-                text: "Eliminate manual inventory management and prevent lost sales with our seamless, automated system."
-              },
-              {
-                icon: <RocketIcon className="h-8 w-8" />,
-                title: "Risk-Free Sales Growth",
-                text: "Turn stockouts into opportunities without needing extra inventory."
-              },
-              {
-                icon: <CheckCircledIcon className="h-8 w-8" />,
-                title: "Trust & Transparency",
-                text: "Clear ratings, dispute resolution, and automated processes ensure fair partnerships."
-              },
-              {
-                icon: <BarChart className="h-8 w-8" />,
-                title: "Scalable & Simple",
-                text: "Start with a free tier and upgrade as you grow—our plans meet all business sizes."
-              }
-            ].map((item, idx) => (
-              <div key={idx} className="p-6 bg-background rounded-xl">
-                <div className="mb-4 text-lime-600">{item.icon}</div>
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-muted-foreground">{item.text}</p>
-              </div>
-            ))}
+      <div id="why-choose" />
+      <FadeInSection>
+        <div className="container mx-auto m-10 bg-green/50 pt-15 pb-15 px-4">
+          <div className="w-full">
+            {/* Add skeleton loading */}
+            <Suspense fallback={<>
+              <Skeleton className="h-[200px] w-full rounded-lg" />
+            </>}>
+            <WhyChooseSection />  
+            </Suspense>
           </div>
         </div>
-      </Section>
+      </FadeInSection>
 
       <div id="pricing" />
       <FadeInSection>
-        <PricingGrid
-          title="Pricing"
-          subtitle="Choose a plan that grows with your business"
-          items={[
-            {
-              title: "Free",
-              price: "$0",
-              description: "Perfect for getting started",
-              features: [
-                "Up to 30 SKUs",
-                "Up to 1 partner store",
-                "Basic analytics",
-                "Standard support",
-                "50¢ convenience fee per order",
-              ],
-              buttonText: "Get Started",
-              buttonHref: "/onboarding?source=free_plan",
-            },
-            {
-              title: "Starter",
-              price: "$15",
-              description: "For growing businesses",
-              features: [
-                "Up to 150 SKUs",
-                "Up to 15 partner stores",
-                "Enhanced analytics",
-                "Priority support",
-                "Lower convenience fees",
-              ],
-              buttonText: "Start Free Trial",
-              isPopular: true,
-              buttonHref: "/onboarding?source=starter_plan",
-            },
-            {
-              title: "Growth",
-              price: "$30",
-              description: "For established businesses",
-              features: [
-                "Up to 400 SKUs",
-                "Up to 40 partner stores",
-                "Advanced analytics",
-                "Premium support",
-                "Lowest convenience fees",
-              ],
-              buttonText: "Start Free Trial",
-              buttonHref: "/onboarding?source=growth_plan",
-            },
-          ]}
-        />
+        <div className="container mx-auto px-4 py-12">
+          <Suspense fallback={<Skeleton className="h-[600px] w-full rounded-lg" />}>
+            <DynamicPricingTabs />
+          </Suspense>
+        </div>
       </FadeInSection>
 
       <div id="faq" />
-      <FAQ />
+      <DynamicFAQ /> {/* Lazy loaded component */}
 
       
       {/*
@@ -287,3 +260,6 @@ export default async function IndexPage() {
     </>
   );
 }
+
+export default LandingPage;
+
