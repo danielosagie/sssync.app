@@ -134,7 +134,7 @@ export default function Hero() {
               >
                 <Mockup type="responsive">
                   <Image
-                    src="/assets/landing_page_sssync.png"
+                    src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5LZPp2JjM7sV0g9flKRpzeaEcXDkCbGjJhtNr"
                     alt="sssync.app dashboard preview"
                     width={1248}
                     height={765}

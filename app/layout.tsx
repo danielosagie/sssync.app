@@ -7,6 +7,12 @@ import "./globals.css";
 import { Provider } from "./provider";
 import { PostHogProviderWrapper } from '@/components/providers/posthog';
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
+import { extractRouterConfig } from "uploadthing/server";
+import { ourFileRouter } from "@/app/api/uploadthing/core";
+import Script from "next/script";
+
 
 const inter = Inter({
   subsets: ['latin'],
@@ -34,6 +40,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={inter.className}>
+      <head>
+        <NextSSRPlugin
+          routerConfig={extractRouterConfig(ourFileRouter)}
+        />
+        <Script id="media-session-fix">
+          {`
+            window.MediaSession = window.MediaSession || {};
+            window.MediaSession.prototype = window.MediaSession.prototype || {};
+            window.MediaSession.prototype.setActionHandler = window.MediaSession.prototype.setActionHandler || function() {};
+          `}
+        </Script>
+      </head>
       <body>
         <Analytics />
         <PostHogProviderWrapper>

@@ -7,7 +7,8 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+    './node_modules/@uploadthing/react/dist/**/*.{js,mjs}'
+  ],
   prefix: "",
   theme: {
   	container: {
@@ -19,7 +20,7 @@ const config = {
   	},
   	extend: {
   		colors: {
-  			border: 'hsl(var(--border) / 0.1)',
+  			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
   			background: 'hsl(var(--background))',
@@ -38,10 +39,10 @@ const config = {
   			},
   			muted: {
   				DEFAULT: 'hsl(var(--muted))',
-  				foreground: 'hsl(var(--muted-foreground) / 0.6)'
+  				foreground: 'hsl(var(--muted-foreground))'
   			},
   			accent: {
-  				DEFAULT: 'hsl(var(--accent) / 0.15)',
+  				DEFAULT: 'hsl(var(--accent))',
   				foreground: 'hsl(var(--accent-foreground))'
   			},
   			popover: {
@@ -49,7 +50,7 @@ const config = {
   				foreground: 'hsl(var(--popover-foreground))'
   			},
   			card: {
-  				DEFAULT: 'hsl(var(--card) / 0.2)',
+  				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
   			},
   			chart: {
