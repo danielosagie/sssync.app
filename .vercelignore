@@ -1,0 +1,4 @@
+# Only exclude what needs to be excluded
+.git
+.github
+.vscode 
