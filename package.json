@@ -45,8 +45,7 @@
     "tailwindcss-animate": "^1.0.7",
     "uploadthing": "^7.5.2",
     "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.31",
-    "@tailwindcss/postcss": "^0.1.0"
+    "postcss": "^8.4.31"
   },
   "devDependencies": {
     "@types/js-cookie": "^3.0.6",
@@ -55,7 +54,6 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "^15.1.7",
-    "postcss": "^8",
     "typescript": "^5"
   }
 }

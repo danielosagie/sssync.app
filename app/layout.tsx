@@ -53,6 +53,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body>
+        <SpeedInsights />
         <Analytics />
         <PostHogProviderWrapper>
           <Provider>
