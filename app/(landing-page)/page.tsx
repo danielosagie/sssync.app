@@ -117,6 +117,7 @@ async function LandingPage() {
                     alt="Shopify"
                     priority={true}
                   />
+                  {/* WooCommerce logo commented out as requested
                   <Image 
                     src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5MgRJZKzKhfNEjBx9Q2zpulADRPmGrvCHMeUW" 
                     width={40} 
@@ -124,6 +125,7 @@ async function LandingPage() {
                     alt="WooCommerce"
                     priority={true}
                   />
+                  */}
                   <Image 
                     src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5uu4A1tRPuIMFSAwTZgvGC2BzXq5Hyk1DRNe8" 
                     width={40} 
@@ -148,7 +150,7 @@ async function LandingPage() {
                 </div>
               ),
               title: "Multi-Platform Inventory Sync",
-              description: "Seamlessly connect and sync real-time inventory across Shopify, WooCommerce, Square, Amazon, and Clover simultaneously. Adding more platforms every month.",
+              description: "Seamlessly connect and sync real-time inventory across Shopify, Square, Amazon, and Clover simultaneously. Adding more platforms every month.",
             },
             {
               icon: <ShoppingBag className="h-8 w-8" />,

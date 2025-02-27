@@ -41,11 +41,16 @@
     "recharts": "^2.15.1",
     "resend": "^4.1.2",
     "tailwind-merge": "^2.6.0",
+<<<<<<< Updated upstream
     "tailwindcss": "^3.3.0",
     "tailwindcss-animate": "^1.0.7",
     "uploadthing": "^7.5.2",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31"
+=======
+    "tailwindcss-animate": "^1.0.7",
+    "uploadthing": "^7.5.2"
+>>>>>>> Stashed changes
   },
   "devDependencies": {
     "@types/js-cookie": "^3.0.6",

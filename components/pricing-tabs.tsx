@@ -17,207 +17,335 @@ interface PricingCardProps {
 }
 
 export function PricingTabs() {
-  const [activeTab, setActiveTab] = useState("sellers");
+  const [activeTab, setActiveTab] = useState("monthly");
   
   return (
-    <div>
-      <Tabs defaultValue="sellers" onValueChange={setActiveTab}>
-        <TabsList className="grid w-full max-w-md mx-auto grid-cols-3 mb-12">
-          <TabsTrigger value="sellers">Individual Sellers</TabsTrigger>
-          <TabsTrigger value="both">Both</TabsTrigger>
-          <TabsTrigger value="marketplace">Marketplace Owners</TabsTrigger>
+    <div className="px-4 sm:px-6">
+      <Tabs defaultValue="monthly" onValueChange={setActiveTab}>
+        <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8 sm:mb-12">
+          <TabsTrigger value="monthly">Monthly</TabsTrigger>
+          <TabsTrigger value="yearly">Yearly (17% savings)</TabsTrigger>
         </TabsList>
         
-        <TabsContent value="sellers">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+        <TabsContent value="monthly">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <PricingCard
-              title="Free Tier"
-              price="$0"
+              title="Basic Sync"
+              price="$9.99"
               description="Perfect for getting started"
               features={[
-                "Basic inventory sync (up to 50 SKUs)",
-                "Limited order offloading (5 orders/month)",
-                "Basic fulfillment tracking",
-                "Basic dashboards",
-                "10% service fee (passed to customer) on marketplace transactions",
-                "Email support"
+                "Real-time inventory sync between Square and Shopify",
+                "Up to 500 products",
+                "2,000 sync operations per month",
+                "Basic marketplace participation",
+                "Connect with up to 3 partner stores",
+                "Standard support (48-hour response)"
               ]}
-              buttonText="Get Started"
-              buttonHref="/onboarding?source=free_seller"
+              buttonText="Get Started "
+              buttonHref="/onboarding?source=basic_monthly"
             />
             <PricingCard
-              title="Pro Seller"
-              price="$29"
+              title="Pro"
+              price="$29.99"
               description="For growing businesses"
               features={[
-                "Advanced inventory sync (up to 500 SKUs)",
-                "Expanded order offloading (50 orders/month)",
-                "Access to partner stores for fulfillment",
-                "Automated payout processing",
-                "Enhanced fulfillment tracking",
-                "7% service fee (passed to customer) on marketplace transactions",
-                "Priority support"
+                "Everything in Basic, plus:",
+                "Up to 2,500 products",
+                "10,000 sync operations per month",
+                "Enhanced marketplace features",
+                "Connect with up to 15 partner stores",
+                "Priority support (24-hour response)"
               ]}
-              buttonText="Start Free Trial"
+              buttonText="Get Started "
               isPopular={true}
-              buttonHref="/onboarding?source=pro_seller"
+              buttonHref="/onboarding?source=pro_monthly"
             />
             <PricingCard
-              title="Enterprise Seller"
-              price="$79"
+              title="Business"
+              price="$79.99"
               description="For established businesses"
               features={[
-                "Unlimited inventory sync across all platforms",
-                "Unlimited order offloading",
-                "Priority matching in the marketplace",
-                "Fully automated contracts and payouts",
-                "Comprehensive fulfillment/tracking system",
-                "5% service fee (passed to customer) on marketplace transactions",
-                "Dedicated support manager"
+                "Everything in Pro, plus:",
+                "Unlimited products",
+                "30,000 sync operations per month",
+                "Advanced marketplace capabilities",
+                "Unlimited partner connections",
+                "White-labeled marketplace widget",
+                "Premium support (8-hour response)"
               ]}
               buttonText="Contact Sales"
-              buttonHref="/onboarding?source=enterprise_seller"
+              buttonHref="/onboarding?source=business_monthly"
             />
           </div>
         </TabsContent>
         
-        <TabsContent value="marketplace">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+        <TabsContent value="yearly">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <PricingCard
-              title="Free Tier"
-              price="$0"
-              description="For new marketplace connections"
-              features={[
-                "Connect with up to 2 partner stores",
-                "Basic customer-facing marketplace widget",
-                "Simple inventory availability display",
-                "Manual order routing",
-                "Basic tracking dashboard",
-                "3% connector fee",
-                "Email support"
-              ]}
-              buttonText="Get Started"
-              buttonHref="/onboarding?source=free_marketplace"
-            />
-            <PricingCard
-              title="Pro Marketplace"
-              price="$39"
-              description="For growing marketplaces"
-              features={[
-                "Connect with up to 30 partner stores",
-                "Enhanced customer-facing marketplace widget",
-                "Automated order routing to partners",
-                "Transparent fulfillment tracking",
-                "Customizable fulfillment rules",
-                "2% connector fee",
-                "Priority support"
-              ]}
-              buttonText="Start Free Trial"
-              isPopular={true}
-              buttonHref="/onboarding?source=pro_marketplace"
-            />
-            <PricingCard
-              title="Enterprise Marketplace"
+              title="Basic Sync"
               price="$99"
-              description="For established marketplaces"
+              description="$9.99/mo value - Save 17%"
               features={[
-                "Unlimited partner store connections",
-                "Fully customizable marketplace widget",
-                "Advanced order routing algorithms",
-                "Complete fulfillment transparency",
-                "White-labeled tracking experience",
-                "1% connector fee",
-                "Dedicated support manager"
+                "Real-time inventory sync between Square and Shopify",
+                "Up to 500 products",
+                "2,000 sync operations per month",
+                "Basic marketplace participation",
+                "Connect with up to 3 partner stores",
+                "Standard support (48-hour response)"
               ]}
-              buttonText="Contact Sales"
-              buttonHref="/onboarding?source=enterprise_marketplace"
+              buttonText="Get Started "
+              buttonHref="/onboarding?source=basic_yearly"
             />
-          </div>
-        </TabsContent>
-        
-        <TabsContent value="both">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             <PricingCard
-              title="Growth Bundle"
-              price="$59"
-              description="Save $9 per month"
+              title="Pro"
+              price="$299"
+              description="$29.99/mo value - Save 17%"
               features={[
-                "Includes Pro Seller ($29 value)",
-                "Includes Pro Marketplace ($39 value)",
-                "All Pro Seller features",
-                "All Pro Marketplace features",
-                "Unified dashboard for both functions",
-                "Combined priority support",
-                "Streamlined setup process"
+                "Everything in Basic, plus:",
+                "Up to 2,500 products",
+                "10,000 sync operations per month",
+                "Enhanced marketplace features",
+                "Connect with up to 15 partner stores",
+                "Priority support (24-hour response)"
               ]}
-              buttonText="Start Free Trial"
+              buttonText="Get Started "
               isPopular={true}
-              buttonHref="/onboarding?source=growth_bundle"
+              buttonHref="/onboarding?source=pro_yearly"
             />
             <PricingCard
-              title="Enterprise Bundle"
-              price="$149"
-              description="Save $29 per month"
+              title="Business"
+              price="$799"
+              description="$79.99/mo value - Save 17%"
               features={[
-                "Includes Enterprise Seller ($79 value)",
-                "Includes Enterprise Marketplace ($99 value)",
-                "All Enterprise Seller features",
-                "All Enterprise Marketplace features",
-                "Unified enterprise dashboard",
-                "Single dedicated support manager",
-                "Custom integration support"
+                "Everything in Pro, plus:",
+                "Unlimited products",
+                "30,000 sync operations per month",
+                "Advanced marketplace capabilities",
+                "Unlimited partner connections",
+                "White-labeled marketplace widget",
+                "Premium support (8-hour response)"
               ]}
               buttonText="Contact Sales"
-              buttonHref="/onboarding?source=enterprise_bundle"
+              buttonHref="/onboarding?source=business_yearly"
             />
           </div>
         </TabsContent>
       </Tabs>
-      {/*
-      <div className="mt-16 max-w-3xl mx-auto bg-muted/50 rounded-lg p-6">
-        <h3 className="text-xl font-semibold mb-4">How This Actually Works in Practice</h3>
+      
+      {/* 
+      // Bundle comparison section - commented out as requested
+      <div className="mt-16 sm:mt-24 mx-auto bg-slate-50 rounded-xl p-4 sm:p-8 md:p-12 max-w-6xl">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
+            Smart on price.<br/>
+            Strong on power.
+          </h2>
+          <p className="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto">
+            sssync.app replaces multiple tools with one integrated solution. See how our all-in-one price compares to piecing together other services.
+          </p>
+        </div>
         
-        <div className="space-y-6">
-          <div>
-            <h4 className="font-medium mb-2">Example 1: Offloading Orders You Can't Fulfill</h4>
-            <p className="text-muted-foreground">When a customer orders a product you're out of stock on:</p>
-            <ul className="list-disc pl-5 mt-2 space-y-1 text-sm">
-              <li>System finds a partner with inventory and routes the order</li>
-              <li>You keep your full asking price, minus the service fee</li>
-              <li>Partner gets compensated for product cost plus handling</li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="font-medium mb-2">Example 2: Selling Excess Inventory</h4>
-            <p className="text-muted-foreground">When you have extra inventory to sell:</p>
-            <ul className="list-disc pl-5 mt-2 space-y-1 text-sm">
-              <li>List it on the marketplace for other stores to access</li>
-              <li>When another store's customer orders your product, you fulfill it</li>
-              <li>You get paid for the product cost plus handling fee</li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="font-medium mb-2">Example 3: Fulfilling Orders for Others</h4>
-            <p className="text-muted-foreground">When a partner store is out of stock:</p>
-            <ul className="list-disc pl-5 mt-2 space-y-1 text-sm">
-              <li>You can fulfill orders for their customers using your inventory</li>
-              <li>You receive payment for product cost plus handling fee</li>
-              <li>Transaction is tracked in your dashboard</li>
-            </ul>
+        ... bundle comparison content ...
+      </div>
+      */}
+      
+      {/* Competitor comparison table - with lime colors */}
+      <div className="mt-16 sm:mt-24 max-w-6xl mx-auto">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-12">Compare With Competitors</h2>
+        
+        <div className="overflow-x-auto -mx-4 sm:mx-0">
+          <div className="inline-block min-w-full sm:px-0 align-middle">
+            <table className="min-w-full border-collapse">
+              <thead>
+                <tr className="border-b-2 border-gray-200">
+                  <th className="py-3 sm:py-4 px-4 sm:px-6 text-left font-bold text-sm sm:text-base"></th>
+                  <th className="py-3 sm:py-4 px-4 sm:px-6 text-center font-bold text-sm sm:text-base">sssync.app</th>
+                  <th className="py-3 sm:py-4 px-4 sm:px-6 text-center font-bold text-sm sm:text-base">Syncio</th>
+                  <th className="py-3 sm:py-4 px-4 sm:px-6 text-center font-bold text-sm sm:text-base">Trunk</th>
+                </tr>
+              </thead>
+              <tbody>
+                {/* Pricing & Basic Info */}
+                <tr className="border-b bg-slate-50">
+                  <td colSpan={4} className="py-3 px-6 font-bold">Pricing & Basic Info</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-3 px-6">Pricing Model</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">Flat fee with usage tiers</td>
+                  <td className="py-3 px-6 text-center">Split model (source vs destination)</td>
+                  <td className="py-3 px-6 text-center">Order volume-based tiers</td>
+                </tr>
+                <tr className="border-b bg-slate-50">
+                  <td className="py-3 px-6">Entry Price</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">$9.99/mo</td>
+                  <td className="py-3 px-6 text-center">Free-$19/mo (source), $19/mo (destination)</td>
+                  <td className="py-3 px-6 text-center">$35/mo</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-3 px-6">Products (Basic)</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">500</td>
+                  <td className="py-3 px-6 text-center">25 (free) - 100 (starter)</td>
+                  <td className="py-3 px-6 text-center">Not limited by product count</td>
+                </tr>
+                <tr className="border-b bg-slate-50">
+                  <td className="py-3 px-6">Annual Savings</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">17%</td>
+                  <td className="py-3 px-6 text-center">Not specified</td>
+                  <td className="py-3 px-6 text-center">None offered</td>
+                </tr>
+                
+                {/* Core Features */}
+                <tr className="border-b">
+                  <td colSpan={4} className="py-3 px-6 font-bold">Core Features</td>
+                </tr>
+                <tr className="border-b bg-slate-50">
+                  <td className="py-3 px-6">Platforms</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">Square + Clover (more coming soon)</td>
+                  <td className="py-3 px-6 text-center">Primarily Shopify-to-Shopify</td>
+                  <td className="py-3 px-6 text-center">Primarily Shopify focused</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-3 px-6">Sync Speed</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">Real-time (60 sec)</td>
+                  <td className="py-3 px-6 text-center">&quot;Real-time&quot; (5-15 min)</td>
+                  <td className="py-3 px-6 text-center">&quot;Real-time&quot; (10-30 min)</td>
+                </tr>
+                <tr className="border-b bg-slate-50">
+                  <td className="py-3 px-6">Full Product Data Sync</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">Included in all plans</td>
+                  <td className="py-3 px-6 text-center">Requires +$19/mo Product Settings add-on</td>
+                  <td className="py-3 px-6 text-center">Included</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-3 px-6">Custom Field Mapping</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">Included in all plans</td>
+                  <td className="py-3 px-6 text-center">Limited without add-ons</td>
+                  <td className="py-3 px-6 text-center">Basic only</td>
+                </tr>
+                <tr className="border-b bg-slate-50">
+                  <td className="py-3 px-6">Bulk Import/Export</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">Included in all plans</td>
+                  <td className="py-3 px-6 text-center">Limited functionality</td>
+                  <td className="py-3 px-6 text-center">Basic functionality</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-3 px-6">Order Syncing</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">Included in all plans</td>
+                  <td className="py-3 px-6 text-center">Requires +$22/mo Order Sync add-on</td>
+                  <td className="py-3 px-6 text-center">Included</td>
+                </tr>
+                <tr className="border-b bg-slate-50">
+                  <td className="py-3 px-6">Bundling & Kitting</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">Included in Pro+ plans</td>
+                  <td className="py-3 px-6 text-center">Not available</td>
+                  <td className="py-3 px-6 text-center">Pro plan only (+$4/mo)</td>
+                </tr>
+                
+                {/* Marketplace Features */}
+                <tr className="border-b">
+                  <td colSpan={4} className="py-3 px-6 font-bold">Marketplace Features</td>
+                </tr>
+                <tr className="border-b bg-slate-50">
+                  <td className="py-3 px-6">Partner Matchmaking</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">Included with compatibility scoring</td>
+                  <td className="py-3 px-6 text-center">Basic partner finder only</td>
+                  <td className="py-3 px-6 text-center">Not available</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-3 px-6">Marketplace Analytics</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">Comprehensive in all paid plans</td>
+                  <td className="py-3 px-6 text-center">Basic dashboard only</td>
+                  <td className="py-3 px-6 text-center">Not available</td>
+                </tr>
+                <tr className="border-b bg-slate-50">
+                  <td className="py-3 px-6">Partner Ratings System</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">Included in Pro+ plans</td>
+                  <td className="py-3 px-6 text-center">Not available</td>
+                  <td className="py-3 px-6 text-center">Not available</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-3 px-6">Automated Order Routing</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">Included in Pro+ plans</td>
+                  <td className="py-3 px-6 text-center">Basic functionality only</td>
+                  <td className="py-3 px-6 text-center">Not available</td>
+                </tr>
+                <tr className="border-b bg-slate-50">
+                  <td className="py-3 px-6">Customizable Fulfillment Rules</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">Included in Pro+ plans</td>
+                  <td className="py-3 px-6 text-center">Not available</td>
+                  <td className="py-3 px-6 text-center">Not available</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-3 px-6">Storefront Widget</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">Included in Business plan</td>
+                  <td className="py-3 px-6 text-center">Not available</td>
+                  <td className="py-3 px-6 text-center">Not available</td>
+                </tr>
+                <tr className="border-b bg-slate-50">
+                  <td className="py-3 px-6">Partner Connections</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">3/15/Unlimited based on tier</td>
+                  <td className="py-3 px-6 text-center">Unlimited but with complex pricing</td>
+                  <td className="py-3 px-6 text-center">Limited to inventory sync only</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-3 px-6">Automated Payouts</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">Weekly/bi-weekly/daily by tier</td>
+                  <td className="py-3 px-6 text-center">Requires +$9/mo Payouts add-on</td>
+                  <td className="py-3 px-6 text-center">Not available</td>
+                </tr>
+                <tr className="border-b bg-slate-50">
+                  <td className="py-3 px-6">API Access</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">Business plan</td>
+                  <td className="py-3 px-6 text-center">Not available</td>
+                  <td className="py-3 px-6 text-center">Limited access</td>
+                </tr>
+                
+                {/* Support section */}
+                <tr className="border-b">
+                  <td colSpan={4} className="py-3 px-6 font-bold">Support & Misc</td>
+                </tr>
+                <tr className="border-b bg-slate-50">
+                  <td className="py-3 px-6">Response Times</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">48h / 24h / 8h based on tier</td>
+                  <td className="py-3 px-6 text-center">72h standard</td>
+                  <td className="py-3 px-6 text-center">48h standard</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-3 px-6">Dedicated Representative</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">Business plan</td>
+                  <td className="py-3 px-6 text-center">Enterprise only</td>
+                  <td className="py-3 px-6 text-center">Not specified</td>
+                </tr>
+                <tr className="border-b bg-slate-50">
+                  <td className="py-3 px-6">Add-on Fees</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">None - all features included</td>
+                  <td className="py-3 px-6 text-center">$19/mo for Product Settings<br/>$22/mo for Order Sync<br/>$9/mo for Payouts</td>
+                  <td className="py-3 px-6 text-center">$4/mo for Pro features</td>
+                </tr>
+                <tr className="border-b">
+                  <td className="py-3 px-6">Fee Structure</td>
+                  <td className="py-3 px-6 text-center font-medium text-lime-600">Transparent 1% marketplace fee</td>
+                  <td className="py-3 px-6 text-center">Complex split between source/destination</td>
+                  <td className="py-3 px-6 text-center">No marketplace capability</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
         
-        <p className="mt-6 text-sm text-muted-foreground italic">The core functionality of sharing inventory and fulfilling orders is available at all tiers. Higher tiers simply give you more connections, lower fees, and better tools to manage the process at scale.</p>
+        <div className="mt-8 text-center px-4 sm:px-0">
+          <p className="text-sm sm:text-base text-muted-foreground mb-6">sssync.app offers a simpler pricing structure with more included features than competitors. No surprise fees, no complexity - just straightforward pricing for powerful inventory management and marketplace capabilities.</p>
+          
+          <a href="/onboarding" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs sm:text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-lime-600 text-white hover:bg-lime-700 px-6 sm:px-8 py-2 sm:py-3">
+            Get Started Now
+          </a>
+        </div>
       </div>
-      */}
-
     </div>
   );
 }
 
-// Update the component to use the interface
+// Also update the PricingCard component to use lime colors
 function PricingCard({
   title,
   price,
@@ -230,10 +358,10 @@ function PricingCard({
   return (
     <div className={cn(
       "relative flex flex-col h-full rounded-lg border bg-card text-card-foreground shadow-sm w-full max-w-sm",
-      isPopular ? "border-primary" : "border-border"
+      isPopular ? "border-lime-600" : "border-border"
     )}>
       {isPopular && (
-        <div className="absolute -top-3 left-0 right-0 mx-auto w-fit rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
+        <div className="absolute -top-3 left-0 right-0 mx-auto w-fit rounded-full bg-lime-600 px-3 py-1 text-xs font-medium text-white">
           Popular
         </div>
       )}
@@ -262,7 +390,7 @@ function PricingCard({
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="h-4 w-4 text-primary shrink-0 mt-1"
+                className="h-4 w-4 text-lime-600 shrink-0 mt-1"
               >
                 <polyline points="20 6 9 17 4 12"></polyline>
               </svg>
@@ -278,7 +406,7 @@ function PricingCard({
           className={cn(
             "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 w-full py-2.5",
             isPopular
-              ? "bg-primary text-primary-foreground hover:bg-primary/90"
+              ? "bg-lime-600 text-white hover:bg-lime-700"
               : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
           )}
         >

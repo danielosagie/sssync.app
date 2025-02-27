@@ -1,0 +1,47 @@
+;;
+;; Domain:     sssync.app.
+;; Exported:   2025-02-27 19:42:44
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+sssync.app	3600	IN	SOA	lennon.ns.cloudflare.com. dns.cloudflare.com. 2049235196 10000 2400 604800 3600
+
+;; NS Records
+sssync.app.	86400	IN	NS	lennon.ns.cloudflare.com.
+sssync.app.	86400	IN	NS	rosalie.ns.cloudflare.com.
+
+;; A Records
+sssync.app.	1	IN	A	76.76.21.21 ; cf_tags=cf-proxied:true
+
+;; CNAME Records
+www.sssync.app.	1	IN	CNAME	cname.vercel-dns.com. ; cf_tags=cf-proxied:true
+
+;; MX Records
+send.sssync.app.	3600	IN	MX	10 feedback-smtp.us-east-1.amazonses.com.
+
+;; TXT Records
+resend._domainkey.sssync.app.	3600	IN	TXT	"p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQClR0+3WlC1zCtAi2BTPy8SNecNDq+bbqmMI46KKkqLB/onkHgFrIV9q6/xoJbhOg4EhyLrLbkhPTBkV2PbricPCw3y4bJloFykQK+3yvBqFv6n4rI2xQDDv1ehTM7xcJl5fQiuYoX46nKkh62l9k7d62bdStaxJAJrzH9RBzSgmQIDAQAB"
+send.sssync.app.	3600	IN	TXT	"v=spf1 include:amazonses.com -all"
+sssync.app.	3600	IN	TXT	"google-site-verification=dMr3s0NZgnlO7VREggKhCPyXXcgTEV-9bJb6mnC50L8"
+_vercel.sssync.app.	3600	IN	TXT	"vc-domain-verify=www.sssync.app,e86bc72af19da0510503,dc"
+_vercel.sssync.app.	3600	IN	TXT	"vc-domain-verify=sssync.app,6487a1a4ba269f698c51,dc"
