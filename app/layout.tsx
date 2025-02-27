@@ -51,6 +51,9 @@ export default function RootLayout({
             window.MediaSession.prototype.setActionHandler = window.MediaSession.prototype.setActionHandler || function() {};
           `}
         </Script>
+        <link rel="preconnect" href="https://ufs.sh" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://ufs.sh" />
       </head>
       <body>
         <SpeedInsights />
