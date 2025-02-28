@@ -8,7 +8,6 @@ export default function Layout(props: { children: React.ReactNode }) {
         items={[
           { title: "Home", href: "/" },
           { title: "Features", href: "/#features" },
-          { title: "Why sssync?", href: "/#why-choose" },
           { title: "Pricing", href: "/#pricing" },
           { title: "FAQ", href: "/#faq" },
         ]}

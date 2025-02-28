@@ -172,19 +172,6 @@ async function LandingPage() {
         />
       </FadeInSection>
 
-      <div id="why-choose" />
-      <FadeInSection>
-        <div className="container mx-auto m-10 bg-green/50 pt-15 pb-15 px-4">
-          <div className="w-full">
-            {/* Add skeleton loading */}
-            <Suspense fallback={<>
-              <Skeleton className="h-[200px] w-full rounded-lg" />
-            </>}>
-            <WhyChooseSection />  
-            </Suspense>
-          </div>
-        </div>
-      </FadeInSection>
 
       <div id="pricing" />
       <FadeInSection>
