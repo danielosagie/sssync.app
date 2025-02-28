@@ -29,7 +29,7 @@ export function PricingTabs() {
         <TabsContent value="monthly">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
             <PricingCard
-              title="Basic Sync"
+              title="Basic"
               price="$9.99"
               description="Perfect for getting started"
               features={[
@@ -75,7 +75,7 @@ export function PricingTabs() {
                 "Premium support (8-hour response)",
                 "Higher Rates AI product migration (500/mo)"
               ]}
-              buttonText="Contact Sales"
+              buttonText="Get Business "
               buttonHref="/onboarding?source=business_monthly"
             />
           </div>
@@ -84,7 +84,7 @@ export function PricingTabs() {
         <TabsContent value="yearly">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
             <PricingCard
-              title="Basic Sync"
+              title="Basic"
               price="$99"
               description="$9.99/mo value - Save 17%"
               features={[
@@ -93,9 +93,10 @@ export function PricingTabs() {
                 "2,000 sync operations per month",
                 "Basic marketplace participation",
                 "Connect with up to 3 partner stores",
-                "Standard support (48-hour response)"
+                "Standard support (48-hour response)",
+                "Basic AI product migration (20/mo)"
               ]}
-              buttonText="Get Basic "
+              buttonText="Get Basic"
               buttonHref="/onboarding?source=basic_yearly"
             />
             <PricingCard
@@ -108,7 +109,8 @@ export function PricingTabs() {
                 "10,000 sync operations per month",
                 "Enhanced marketplace features",
                 "Connect with up to 15 partner stores",
-                "Priority support (24-hour response)"
+                "Priority support (24-hour response)",
+                "Advanced AI product migration (100/mo)"
               ]}
               buttonText="Get Pro "
               isPopular={true}
@@ -125,9 +127,10 @@ export function PricingTabs() {
                 "Advanced marketplace capabilities",
                 "Unlimited partner connections",
                 "White-labeled marketplace widget",
-                "Premium support (8-hour response)"
+                "Premium support (8-hour response)",
+                "Higher Rates AI product migration (500/mo)"
               ]}
-              buttonText="Get Business"
+              buttonText="Get Business "
               buttonHref="/onboarding?source=business_yearly"
             />
           </div>
@@ -251,9 +254,9 @@ export function PricingTabs() {
               </tr>
               <tr className="border-b">
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-sm whitespace-nowrap">Marketplace Fee</td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">3%</td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50 font-medium">2%</td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">1%</td>
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">1.5%</td>
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50 font-medium">1.5%</td>
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">1.5%</td>
               </tr>
 
               {/* Basic Features */}
@@ -517,12 +520,12 @@ export function PricingTabs() {
         <div className="mt-8 text-center px-4 sm:px-0">
           <p className="text-sm sm:text-base text-muted-foreground mb-6">sssync.app offers a simpler pricing structure with more included features than competitors. No surprise fees, no complexity - just straightforward pricing for powerful inventory management and marketplace capabilities.</p>
           
-          <a href="/onboarding" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs sm:text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 px-6 sm:px-8 py-2 sm:py-3">
-            Start your 14-day free trial today
+          <a href="/onboarding" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs sm:text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-lime-600 text-primary-foreground hover:bg-primary/90 px-6 sm:px-8 py-2 sm:py-3">
+            Get Started In Minutes
           </a>
         </div>
         <div className="mt-16 sm:mt-24 max-w-6xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-12">Compare With Competitors</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-12">Why use <span className="text-lime-600">sssync?</span></h2>
             
             <div className="overflow-x-auto -mx-4 sm:mx-0">
             <div className="inline-block min-w-full sm:px-0 align-middle">
@@ -571,15 +574,15 @@ export function PricingTabs() {
                     </tr>
                     <tr className="border-b bg-slate-50">
                     <td className="py-3 px-6">Platforms</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">Square + Clover (more coming soon)</td>
-                    <td className="py-3 px-6 text-center">Primarily Shopify-to-Shopify</td>
-                    <td className="py-3 px-6 text-center">Primarily Shopify focused</td>
+                    <td className="py-3 px-6 text-center font-medium text-green-600">Square + Clover + Amazon + Shopify (more coming soon)</td>
+                    <td className="py-3 px-6 text-center">Shopify-to-Shopify</td>
+                    <td className="py-3 px-6 text-center">18+ platforms supported</td>
                     </tr>
                     <tr className="border-b">
                     <td className="py-3 px-6">Sync Speed</td>
                     <td className="py-3 px-6 text-center font-medium text-green-600">Real-time (60 sec)</td>
-                    <td className="py-3 px-6 text-center">"Real-time" (5-15 min)</td>
-                    <td className="py-3 px-6 text-center">"Real-time" (10-30 min)</td>
+                    <td className="py-3 px-6 text-center">Basic &quot;Real-time&quot; (5-15 min)</td>
+                    <td className="py-3 px-6 text-center">Basic &quot;Real-time&quot; (10-30 min)</td>
                     </tr>
                     <tr className="border-b bg-slate-50">
                     <td className="py-3 px-6">Full Product Data Sync</td>
@@ -625,7 +628,7 @@ export function PricingTabs() {
                     <tr className="border-b bg-slate-50">
                     <td className="py-3 px-6">Marketplace Integration</td>
                     <td className="py-3 px-6 text-center font-medium text-green-600">Built into all plans</td>
-                    <td className="py-3 px-6 text-center">Basic access, "priority access" for paid plans</td>
+                    <td className="py-3 px-6 text-center">Basic access, priority access for paid plans</td>
                     <td className="py-3 px-6 text-center">Not available</td>
                     </tr>
                     <tr className="border-b">
@@ -713,7 +716,7 @@ export function PricingTabs() {
                     </tr>
                     <tr className="border-b">
                     <td className="py-3 px-6">Fee Structure</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">Transparent 1% marketplace fee</td>
+                    <td className="py-3 px-6 text-center font-medium text-green-600">1.5% marketplace fee</td>
                     <td className="py-3 px-6 text-center">Complex split between source/destination</td>
                     <td className="py-3 px-6 text-center">No marketplace capability</td>
                     </tr>
@@ -725,8 +728,8 @@ export function PricingTabs() {
         <div className="mt-8 text-center px-4 sm:px-0">
             <p className="text-sm sm:text-base text-muted-foreground mb-6">sssync.app offers a simpler pricing structure with more included features than competitors. No surprise fees, no complexity - just straightforward pricing for powerful inventory management and marketplace capabilities.</p>
             
-            <a href="/onboarding" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs sm:text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 px-6 sm:px-8 py-2 sm:py-3">
-            Start your 14-day free trial today
+            <a href="/onboarding" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs sm:text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-lime-600 text-primary-foreground hover:bg-primary/90 px-6 sm:px-8 py-2 sm:py-3">
+            Get Started In Minutes
             </a>
         </div>
       </div>

@@ -141,7 +141,7 @@ async function LandingPage() {
                 </div>
               ),
               title: "Multi-Platform Inventory Sync",
-              description: "Seamlessly connect and sync real-time inventory across Shopify, WooCommerce, Square, Amazon, and Clover simultaneously. Adding more platforms every month.",
+              description: "Seamlessly connect and sync real-time inventory across Shopify, Square, Amazon, and Clover simultaneously. (more coming soon)",
             },
             {
               icon: <ShoppingBag className="h-8 w-8" />,
