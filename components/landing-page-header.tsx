@@ -12,6 +12,7 @@ import { Button, buttonVariants } from "./ui/button";
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
+
 interface NavProps {
   items?: {
     title: string;

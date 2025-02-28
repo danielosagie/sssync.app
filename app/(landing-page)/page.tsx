@@ -111,37 +111,28 @@ async function LandingPage() {
               icon: (
                 <div className="w-fit flex items-center justify-center gap-6">
                   <Image 
-                    src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5r68Y3eDIWUX741uOAt8sNM3aKmjDlELbpfR2" 
+                    src="/assets/shopify-logo-svgrepo-com.svg" 
                     width={40} 
                     height={40} 
                     alt="Shopify"
                     priority={true}
                   />
-                  {/* WooCommerce logo commented out as requested
                   <Image 
-                    src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5MgRJZKzKhfNEjBx9Q2zpulADRPmGrvCHMeUW" 
-                    width={40} 
-                    height={40} 
-                    alt="WooCommerce"
-                    priority={true}
-                  />
-                  */}
-                  <Image 
-                    src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5uu4A1tRPuIMFSAwTZgvGC2BzXq5Hyk1DRNe8" 
+                    src="/assets/Square,_Inc._-_Square_logo.svg" 
                     width={40} 
                     height={40} 
                     alt="Square"
                     priority={true}
                   />
                   <Image 
-                    src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5MjfGso2zKhfNEjBx9Q2zpulADRPmGrvCHMeU" 
+                    src="/assets/Clover-POS-300x300.webp" 
                     width={40} 
                     height={40} 
                     alt="Clover"
                     priority={true}
                   />
                   <Image 
-                    src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5bGLqL8IRHnfzVBgFT0WMP9t8awbJ2rOESokd" 
+                    src="/assets/Amazon_icon.svg" 
                     width={40} 
                     height={40} 
                     alt="Amazon"
@@ -150,7 +141,7 @@ async function LandingPage() {
                 </div>
               ),
               title: "Multi-Platform Inventory Sync",
-              description: "Seamlessly connect and sync real-time inventory across Shopify, Square, Amazon, and Clover simultaneously. Adding more platforms every month.",
+              description: "Seamlessly connect and sync real-time inventory across Shopify, Square, Amazon, and Clover simultaneously. (more coming soon)",
             },
             {
               icon: <ShoppingBag className="h-8 w-8" />,
