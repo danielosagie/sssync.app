@@ -54,6 +54,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://ufs.sh" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://ufs.sh" />
+        <Script src="https://critical-script.com/script.js" strategy="beforeInteractive" />
+        <Script src="https://analytics.com/script.js" strategy="afterInteractive" />
+        <Script src="https://non-critical.com/script.js" strategy="lazyOnload" />
       </head>
       <body>
         <Analytics />

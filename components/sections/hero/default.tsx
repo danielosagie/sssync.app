@@ -13,6 +13,7 @@ import { useSearchParams } from "next/navigation";
 import { WorldMap } from "@/components/ui/world-map";
 import { motion } from "framer-motion";
 import { usePostHog } from 'posthog-js/react';
+import { FallbackImage } from "@/components/ui/fallback-image";
 
 
 function WorldMapDemo() {
@@ -41,7 +42,7 @@ export default function Hero() {
           <FadeInSection>
             <Badge variant="outline" className="animate-appear w-full sm:w-auto">
               <span className="text-muted-foreground">
-                Coming in Private Beta
+                Early Access Available Now
               </span>
               <a
                 href="/onboarding?source=learn_more"
@@ -60,10 +61,10 @@ export default function Hero() {
                   Sync, Partner, & Fulfill
                 </h1>
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-black dark:text-white mb-4 sm:mb-6">
-                  Inventory Sync & Shared Marketplace for Ecommerce
+                  Multi-Platform Inventory Sync & Shared Marketplace
                 </h2>
                 <p className="text-sm sm:text-base md:text-lg text-neutral-500 max-w-2xl mx-auto px-2 sm:px-0">
-                Say goodbye to stockouts & extra inventory. Seamlessly sync inventory across <span className="text-darkgrey font-semibold">Shopify</span>, <span className="text-darkgrey font-semibold">Square</span>, <span className="text-darkgrey font-semibold">Clover</span>, <span className="text-darkgrey font-semibold">Amazon</span>, and a <span className="text-darkgrey font-semibold">network of local partners</span>. Keep every store stocked, automate orders/fulfillment, all while saving time & money.
+                Say goodbye to stockouts & extra inventory. Seamlessly sync inventory across <span className="text-darkgrey font-semibold">Shopify</span>, <span className="text-darkgrey font-semibold">Square</span>, <span className="text-darkgrey font-semibold">Clover</span>, <span className="text-darkgrey font-semibold">Amazon</span>, and a <span className="text-darkgrey font-semibold">network of local partners</span>. Keep your stores stocked, partner with local stores, automate orders/fulfillment, all while saving time & money.
                 </p>
               </div>
             </FadeInSection>
@@ -133,8 +134,9 @@ export default function Hero() {
                 size="small"
               >
                 <Mockup type="responsive">
-                  <Image
+                  <FallbackImage
                     src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5LZPp2JjM7sV0g9flKRpzeaEcXDkCbGjJhtNr"
+                    fallbackSrc="/assets/dashboard-preview.png"
                     alt="sssync.app dashboard previews"
                     width={1248}
                     height={765}

@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { get } from '@vercel/edge-config';
+import { NextRequest } from 'next/server';
 
 // Combine both matchers
 export const config = { 
@@ -9,7 +10,7 @@ export const config = {
   ]
 };
 
-export async function middleware(request) {
+export async function middleware(request: NextRequest) {
   // Check if this is the /welcome route
   if (request.nextUrl.pathname === '/welcome') {
     try {

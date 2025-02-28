@@ -3,8 +3,9 @@ const nextConfig = {
   // Image optimization settings
   images: {
     formats: ['image/avif', 'image/webp', 'image/png', 'image/jpeg', 'image/jpg', 'image/gif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
-    minimumCacheTTL: 60,
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
     remotePatterns: [
       {
         protocol: 'https',
@@ -46,6 +47,9 @@ const nextConfig = {
   // Add these performance optimizations
   poweredByHeader: false,
   compress: true,
+
+  // Add output: 'standalone' for better serverless performance
+  output: 'standalone',
 };
 
 export default nextConfig;
