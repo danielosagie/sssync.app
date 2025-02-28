@@ -7,7 +7,7 @@ import "./globals.css";
 import { Provider } from "./provider";
 import { PostHogProviderWrapper } from '@/components/providers/posthog';
 import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "@/app/api/uploadthing/core";
@@ -56,13 +56,13 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://ufs.sh" />
       </head>
       <body>
-        <SpeedInsights />
         <Analytics />
         <PostHogProviderWrapper>
           <Provider>
             <StackProvider app={stackServerApp}>
               <StackTheme>
                 {children}
+                <SpeedInsights />
               </StackTheme>
             </StackProvider>
           </Provider>
