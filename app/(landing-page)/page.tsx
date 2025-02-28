@@ -118,13 +118,6 @@ async function LandingPage() {
                     priority={true}
                   />
                   <Image 
-                    src="/assets/WooCommerce_logo.svg" 
-                    width={40} 
-                    height={40} 
-                    alt="WooCommerce"
-                    priority={true}
-                  />
-                  <Image 
                     src="/assets/Square,_Inc._-_Square_logo.svg" 
                     width={40} 
                     height={40} 
