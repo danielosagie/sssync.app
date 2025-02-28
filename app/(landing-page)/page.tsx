@@ -111,28 +111,28 @@ async function LandingPage() {
               icon: (
                 <div className="w-fit flex items-center justify-center gap-6">
                   <Image 
-                    src="/assets/shopify-logo-svgrepo-com.svg" 
+                    src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5r68Y3eDIWUX741uOAt8sNM3aKmjDlELbpfR2" 
                     width={40} 
                     height={40} 
                     alt="Shopify"
                     priority={true}
                   />
                   <Image 
-                    src="/assets/Square,_Inc._-_Square_logo.svg" 
+                    src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5uu4A1tRPuIMFSAwTZgvGC2BzXq5Hyk1DRNe8" 
                     width={40} 
                     height={40} 
                     alt="Square"
                     priority={true}
                   />
                   <Image 
-                    src="/assets/Clover-POS-300x300.webp" 
+                    src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5MjfGso2zKhfNEjBx9Q2zpulADRPmGrvCHMeU" 
                     width={40} 
                     height={40} 
                     alt="Clover"
                     priority={true}
                   />
                   <Image 
-                    src="/assets/Amazon_icon.svg" 
+                    src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5bGLqL8IRHnfzVBgFT0WMP9t8awbJ2rOESokd" 
                     width={40} 
                     height={40} 
                     alt="Amazon"

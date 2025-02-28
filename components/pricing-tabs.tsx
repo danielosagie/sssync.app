@@ -519,10 +519,7 @@ export function PricingTabs() {
         
         <div className="mt-8 text-center px-4 sm:px-0">
           <p className="text-sm sm:text-base text-muted-foreground mb-6">sssync.app offers a simpler pricing structure with more included features than competitors. No surprise fees, no complexity - just straightforward pricing for powerful inventory management and marketplace capabilities.</p>
-          
-          <a href="/onboarding" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs sm:text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-lime-600 text-primary-foreground hover:bg-primary/90 px-6 sm:px-8 py-2 sm:py-3">
-            Get Started In Minutes
-          </a>
+        
         </div>
         <div className="mt-16 sm:mt-24 max-w-6xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-12">Why use <span className="text-lime-600">sssync?</span></h2>

@@ -173,7 +173,7 @@ export function LandingPageHeader(props: NavProps) {
           
           <Link href="/" className="hidden sm:flex items-center gap-2">
             <Image
-              src="/assets/sssv2.svg"
+              src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5MJAhIjzKhfNEjBx9Q2zpulADRPmGrvCHMeUW"
               alt="sssync logo"
               width={24}
               height={24}
