@@ -9,15 +9,7 @@ export function ColorModeSwitcher() {
 
   return (
     <>
-      <Button
-        variant="ghost"
-        size="icon"
-        onClick={() => setTheme("dark")}
-        className="dark:hidden"
-      >
-        <Moon />
-      </Button>
-      
+
       <Button
         variant="ghost"
         size="icon"

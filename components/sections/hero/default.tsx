@@ -63,7 +63,7 @@ export default function Hero() {
                   Inventory Sync & Shared Marketplace for Ecommerce
                 </h2>
                 <p className="text-sm sm:text-base md:text-lg text-neutral-500 max-w-2xl mx-auto px-2 sm:px-0">
-                Say goodbye to stockouts & extra inventory. Seamlessly sync inventory across <span className="text-darkgrey font-semibold">Shopify</span>, <span className="text-darkgrey font-semibold">Square</span>, <span className="text-darkgrey font-semibold">Clover</span>, <span className="text-darkgrey font-semibold">WooCommerce</span>, <span className="text-darkgrey font-semibold">Amazon</span>, and a <span className="text-darkgrey font-semibold">network of local partners</span>. Keep every store stocked, automate orders/fulfillment, all while saving time & money.
+                Say goodbye to stockouts & extra inventory. Seamlessly sync inventory across <span className="text-darkgrey font-semibold">Shopify</span>, <span className="text-darkgrey font-semibold">Square</span>, <span className="text-darkgrey font-semibold">Clover</span>, <span className="text-darkgrey font-semibold">Amazon</span>, and a <span className="text-darkgrey font-semibold">network of local partners</span>. Keep every store stocked, automate orders/fulfillment, all while saving time & money.
                 </p>
               </div>
             </FadeInSection>
@@ -134,8 +134,8 @@ export default function Hero() {
               >
                 <Mockup type="responsive">
                   <Image
-                    src="/public/assets/landing_page_sssync.png"
-                    alt="sssync.app dashboard preview"
+                    src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5LZPp2JjM7sV0g9flKRpzeaEcXDkCbGjJhtNr"
+                    alt="sssync.app dashboard previews"
                     width={1248}
                     height={765}
                     className="rounded-md"

@@ -7,27 +7,14 @@ const nextConfig = {
     minimumCacheTTL: 60,
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "**.ufs.sh",
-        port: "",
-        pathname: "/**",
+        protocol: 'https',
+        hostname: '**',
       },
-      {
-        protocol: "https",
-        hostname: "**.uploadthing.com",
-        port: "",
-        pathname: "/**",
-      },
-      {
-        protocol: "https",
-        hostname: "utfs.io",
-        port: "",
-        pathname: "/**",
-      }
     ],
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    domains: ['dxeikk2e6c.ufs.sh'],
   },
   
   // Remove console logs in production
