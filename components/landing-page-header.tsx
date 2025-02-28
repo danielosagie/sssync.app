@@ -170,7 +170,7 @@ export function LandingPageHeader(props: NavProps) {
               height={24}
               className="mr-1"
               priority={true}
-              debug={true}
+              debug={false}
             />
             <span className="font-bold text-lg">sssync</span>
           </Link>
@@ -184,7 +184,7 @@ export function LandingPageHeader(props: NavProps) {
               height={24}
               className="mr-1"
               priority={true}
-              debug={true}
+              debug={false}
             />
             <span className="font-bold text-lg">sssync</span>
           </Link>

@@ -118,7 +118,7 @@ async function LandingPage() {
                     height={40} 
                     alt="Shopify"
                     priority={true}
-                    debug={true}
+                    debug={false}
                   />
                   <FallbackImage 
                     src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5uu4A1tRPuIMFSAwTZgvGC2BzXq5Hyk1DRNe8" 
@@ -127,7 +127,7 @@ async function LandingPage() {
                     height={40} 
                     alt="Square"
                     priority={true}
-                    debug={true}
+                    debug={false}
                   />
                   <FallbackImage 
                     src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5MjfGso2zKhfNEjBx9Q2zpulADRPmGrvCHMeU" 
@@ -136,7 +136,7 @@ async function LandingPage() {
                     height={40} 
                     alt="Clover"
                     priority={true}
-                    debug={true}
+                    debug={false}
                   />
                   <FallbackImage 
                     src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5bGLqL8IRHnfzVBgFT0WMP9t8awbJ2rOESokd" 
@@ -145,7 +145,7 @@ async function LandingPage() {
                     height={40} 
                     alt="Amazon"
                     priority={true}
-                    debug={true}
+                    debug={false}
                   />
                 </div>
               ),
