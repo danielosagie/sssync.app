@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/pre-build.js && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "vercel-build": "node scripts/pre-build.js && next build"
+    "vercel-build": "node scripts/pre-build.js && next build",
+    "pre-build": "node scripts/pre-build.js"
   },
   "dependencies": {
     "@fillout/react": "^1.1.2",

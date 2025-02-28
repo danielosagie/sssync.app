@@ -58,7 +58,9 @@ function AuthButtons() {
   const figmaSignUpLink = "https://www.figma.com/proto/0p7y0hGDDd9a2EdziZMiLb/ACSM-Style-Guide?page-id=642%3A470&node-id=934-4640&viewport=2026%2C-2680%2C0.57&t=wuZP7xZENApPsQFA-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=934%3A4640";
 
   return (
+  
     <div className="flex gap-2">
+      {/*
       <Button asChild>
         <a 
           href={figmaSignInLink} 
@@ -77,7 +79,9 @@ function AuthButtons() {
           Sign Up
         </a>
       </Button>
+      */}
     </div>
+    
   );
 }
 
