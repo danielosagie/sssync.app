@@ -9,7 +9,7 @@ export function ColorModeSwitcher() {
 
   return (
     <>
-
+    
       <Button
         variant="ghost"
         size="icon"

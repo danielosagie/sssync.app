@@ -2,7 +2,7 @@
 const nextConfig = {
   // Image optimization settings
   images: {
-    formats: ['image/avif', 'image/webp'],
+    formats: ['image/avif', 'image/webp', 'image/png', 'image/jpeg', 'image/jpg', 'image/gif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     minimumCacheTTL: 60,
     remotePatterns: [
@@ -14,7 +14,7 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    domains: ['dxeikk2e6c.ufs.sh'],
+    domains: ['dxeikk2e6c.ufs.sh', 'res.cloudinary.com'],
   },
   
   // Remove console logs in production
@@ -36,6 +36,16 @@ const nextConfig = {
       },
     ];
   },
+
+  experimental: {
+    allowMiddlewareResponseBody: true,
+    optimizeCss: true,
+    scrollRestoration: true,
+  },
+
+  // Add these performance optimizations
+  poweredByHeader: false,
+  compress: true,
 };
 
 export default nextConfig;

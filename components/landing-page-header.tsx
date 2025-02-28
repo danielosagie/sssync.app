@@ -11,6 +11,7 @@ import { Logo } from "./logo";
 import { Button, buttonVariants } from "./ui/button";
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import { FallbackImage } from '@/components/ui/fallback-image';
 
 
 interface NavProps {
@@ -161,23 +162,29 @@ export function LandingPageHeader(props: NavProps) {
           </Button>
 
           <Link href="/" className="flex items-center gap-2 sm:hidden">
-            <Image
+            <FallbackImage
               src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5MJAhIjzKhfNEjBx9Q2zpulADRPmGrvCHMeUW"
+              fallbackSrc="/assets/sssv2.svg"
               alt="sssync logo"
               width={24}
               height={24}
               className="mr-1"
+              priority={true}
+              debug={false}
             />
             <span className="font-bold text-lg">sssync</span>
           </Link>
           
           <Link href="/" className="hidden sm:flex items-center gap-2">
-            <Image
+            <FallbackImage
               src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5MJAhIjzKhfNEjBx9Q2zpulADRPmGrvCHMeUW"
+              fallbackSrc="/assets/sssv2.svg"
               alt="sssync logo"
               width={24}
               height={24}
               className="mr-1"
+              priority={true}
+              debug={false}
             />
             <span className="font-bold text-lg">sssync</span>
           </Link>

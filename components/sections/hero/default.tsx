@@ -139,6 +139,8 @@ export default function Hero() {
                     width={1248}
                     height={765}
                     className="rounded-md"
+                    priority={true}
+                    debug={false}
                   />
                 </Mockup>
               </MockupFrame>

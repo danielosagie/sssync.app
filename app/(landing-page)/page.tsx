@@ -40,6 +40,7 @@ import dynamic from 'next/dynamic'
 import { Skeleton } from "@/components/ui/skeleton";
 import { Suspense } from "react";
 import { WhyChooseSection } from "@/components/sections/whychooseus";
+import { FallbackImage } from '@/components/ui/fallback-image';
 
 // Lazy load components that are below the fold
 const DynamicPricingTabs = dynamic(() => import('@/components/pricing-tabs').then(mod => mod.PricingTabs), {
@@ -110,33 +111,41 @@ async function LandingPage() {
             {
               icon: (
                 <div className="w-fit flex items-center justify-center gap-6">
-                  <Image 
-                    src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5r68Y3eDIWUX741uOAt8sNM3aKmjDlELbpfR2" 
+                  <FallbackImage 
+                    src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5r68Y3eDIWUX741uOAt8sNM3aKmjDlELbpfR2"
+                    fallbackSrc="/assets/shopify-logo-svgrepo-com.svg"
                     width={40} 
                     height={40} 
                     alt="Shopify"
                     priority={true}
+                    debug={false}
                   />
-                  <Image 
+                  <FallbackImage 
                     src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5uu4A1tRPuIMFSAwTZgvGC2BzXq5Hyk1DRNe8" 
+                    fallbackSrc="/assets/Square,_Inc._-_Square_logo.svg"
                     width={40} 
                     height={40} 
                     alt="Square"
                     priority={true}
+                    debug={false}
                   />
-                  <Image 
+                  <FallbackImage 
                     src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5MjfGso2zKhfNEjBx9Q2zpulADRPmGrvCHMeU" 
+                    fallbackSrc="/assets/Clover-POS-300x300.webp"
                     width={40} 
                     height={40} 
                     alt="Clover"
                     priority={true}
+                    debug={false}
                   />
-                  <Image 
+                  <FallbackImage 
                     src="https://dxeikk2e6c.ufs.sh/f/0UWZWh8ye0t5bGLqL8IRHnfzVBgFT0WMP9t8awbJ2rOESokd" 
+                    fallbackSrc="/assets/Amazon_icon.svg"
                     width={40} 
                     height={40} 
                     alt="Amazon"
                     priority={true}
+                    debug={false}
                   />
                 </div>
               ),
