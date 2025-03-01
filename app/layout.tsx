@@ -12,7 +12,7 @@ import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "@/app/api/uploadthing/core";
 import Script from "next/script";
-
+import { PHProvider } from '@/components/posthog-provider'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -60,16 +60,18 @@ export default function RootLayout({
       </head>
       <body>
         <Analytics />
-        <PostHogProviderWrapper>
-          <Provider>
-            <StackProvider app={stackServerApp}>
-              <StackTheme>
-                {children}
-                <SpeedInsights />
-              </StackTheme>
-            </StackProvider>
-          </Provider>
-        </PostHogProviderWrapper>
+        <PHProvider>
+          <PostHogProviderWrapper>
+            <Provider>
+              <StackProvider app={stackServerApp}>
+                <StackTheme>
+                  {children}
+                  <SpeedInsights />
+                </StackTheme>
+              </StackProvider>
+            </Provider>
+          </PostHogProviderWrapper>
+        </PHProvider>
       </body>
     </html>
   );

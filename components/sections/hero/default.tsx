@@ -29,11 +29,18 @@ export default function Hero() {
   const source = searchParams.get("source");
   const posthog = usePostHog();
 
-  const handleClick = () => {
+  const trackCTA = (buttonName: string) => {
     posthog.capture('cta_click', {
-      button: 'primary'
+      button: buttonName,
+      page: window.location.pathname
     });
   };
+
+  const trackWaitlist = () => {
+    posthog.capture('waitlist_signup', {
+      source: 'hero_section'
+    })
+  }
 
   return (
     <Section className="fade-bottom overflow-hidden pb-0 sm:pb-0 md:pb-0">
@@ -49,6 +56,7 @@ export default function Hero() {
               </span>
               <a
                 href="/onboarding?source=learn_more"
+                onClick={() => trackCTA('learn_more')}
                 className="flex items-center gap-1"
               >
                 Learn More
@@ -74,21 +82,33 @@ export default function Hero() {
 
             <FadeInSection delay={0.2}>
               <div className="relative z-10 flex flex-col sm:flex-row justify-center items-center gap-3 w-full sm:w-auto mx-2 sm:mx-8">
+                
+                {/*
                 <Button 
                   variant="outline" 
                   size="lg" 
                   asChild 
                   className="w-full sm:w-auto text-xs sm:text-sm md:text-base"
                 >
-                  <a href="https://www.figma.com/proto/0p7y0hGDDd9a2EdziZMiLb/ACSM-Style-Guide?page-id=642%3A470&node-id=971-28283&viewport=2026%2C-2680%2C0.57&t=wuZP7xZENApPsQFA-1&scaling=scale-down&content-scaling=responsive&starting-point-node-id=934%3A4640" onClick={handleClick}>Try Demo</a>
+                  <a 
+                    href="https://www.figma.com/proto/0p7y0hGDDd9a2EdziZMiLb/ACSM-Style-Guide?page-id=642%3A470&node-id=971-28283&viewport=2026%2C-2680%2C0.57&t=wuZP7xZENApPsQFA-1&scaling=scale-down&content-scaling=responsive&starting-point-node-id=934%3A4640" 
+                    onClick={() => trackCTA('try_demo')}
+                  >
+                    Try Demo
+                  </a>
                 </Button>
+                */}
+            
                 <Button 
                   variant="default" 
                   className="bg-lime-600 w-full sm:w-auto text-xs sm:text-sm md:text-base" 
                   size="lg" 
                   asChild
                 >
-                  <a href="/onboarding?source=marketplace_cta">
+                  <a 
+                    href="/onboarding?source=marketplace_cta" 
+                    onClick={() => trackCTA('join_marketplace')}
+                  >
                     <Store className="mr-2 h-4 w-4" /> Join Marketplace
                   </a>
                 </Button>

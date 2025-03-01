@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
+import { usePostHog } from 'posthog-js/react'
 
 // Add type interface at the top of the file
 interface PricingCardProps {
@@ -17,7 +18,15 @@ interface PricingCardProps {
 
 export function PricingTabs() {
   const [activeTab, setActiveTab] = useState("monthly");
+  const posthog = usePostHog()
   
+  const trackPricingCTA = (ctaType: string) => {
+    posthog.capture('pricing_cta_click', {
+      button: ctaType,
+      page: window.location.pathname
+    })
+  }
+
   return (
     <div className="px-4 sm:px-6">
       <Tabs defaultValue="monthly" onValueChange={setActiveTab}>
@@ -55,7 +64,8 @@ export function PricingTabs() {
                 "Enhanced marketplace features",
                 "Connect with up to 15 partner stores",
                 "Priority support (24-hour response)",
-                "Advanced AI product migration (100/mo)"
+                "Advanced AI product migration (100/mo)",
+                "Shopify Storefront widget"
               ]}
               buttonText="Get Pro "
               isPopular={true}
@@ -110,7 +120,8 @@ export function PricingTabs() {
                 "Enhanced marketplace features",
                 "Connect with up to 15 partner stores",
                 "Priority support (24-hour response)",
-                "Advanced AI product migration (100/mo)"
+                "Advanced AI product migration (100/mo)",
+                "Shopify Storefront widget"
               ]}
               buttonText="Get Pro "
               isPopular={true}
@@ -216,7 +227,11 @@ export function PricingTabs() {
               <p className="text-sm text-slate-500">Pro Plan - all-inclusive</p>
             </div>
             
-            <a href="/onboarding" className="text-center w-full bg-primary text-primary-foreground font-medium py-3 rounded-md hover:bg-primary/90 transition-colors">
+            <a 
+              href="/onboarding" 
+              onClick={() => trackPricingCTA('get_started')}
+              className="text-center w-full bg-primary text-primary-foreground font-medium py-3 rounded-md hover:bg-primary/90 transition-colors"
+            >
               Get Started For Free
             </a>
           </div>
@@ -407,8 +422,8 @@ export function PricingTabs() {
                   </svg>
                 </td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-red-500" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-lime-500" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">
@@ -665,7 +680,7 @@ export function PricingTabs() {
                     </tr>
                     <tr className="border-b">
                     <td className="py-3 px-6">Storefront Widget</td>
-                    <td className="py-3 px-6 text-center font-medium text-lime-600">Included in Business plan</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">Included in Pro & Business plan</td>
                     <td className="py-3 px-6 text-center">Not available</td>
                     <td className="py-3 px-6 text-center">Not available</td>
                     </tr>
@@ -724,8 +739,12 @@ export function PricingTabs() {
         <div className="mt-8 text-center px-4 sm:px-0">
             <p className="text-sm sm:text-base text-muted-foreground mb-6">sssync.app offers a simpler pricing structure with more included features than competitors. No surprise fees, no complexity - just straightforward pricing for powerful inventory management and marketplace capabilities.</p>
             
-            <a href="/onboarding" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs sm:text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-lime-600 text-primary-foreground hover:bg-primary/90 px-6 sm:px-8 py-2 sm:py-3">
-            Get Started In Minutes
+            <a 
+              href="/onboarding" 
+              onClick={() => trackPricingCTA('get_started')}
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-xs sm:text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-lime-600 text-primary-foreground hover:bg-primary/90 px-6 sm:px-8 py-2 sm:py-3"
+            >
+              Get Started In Minutes
             </a>
         </div>
       </div>
@@ -743,6 +762,15 @@ function PricingCard({
   buttonHref,
   isPopular = false
 }: PricingCardProps) {
+  const posthog = usePostHog()
+
+  const trackPlanCTA = (planName: string) => {
+    posthog.capture('plan_cta_click', {
+      plan: planName,
+      page: window.location.pathname
+    })
+  }
+
   return (
     <div className={cn(
       "relative flex flex-col h-full rounded-lg border bg-card text-card-foreground shadow-sm w-full max-w-sm",
@@ -791,6 +819,7 @@ function PricingCard({
       <div className="p-6 pt-0 mt-auto">
         <a
           href={buttonHref}
+          onClick={() => trackPlanCTA(title)}
           className={cn(
             "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 w-full py-2.5",
             isPopular
