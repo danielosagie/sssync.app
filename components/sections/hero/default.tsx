@@ -40,7 +40,10 @@ export default function Hero() {
       <div className="mx-auto flex max-w-container flex-col gap-8 pt-8 sm:gap-12 sm:pt-16">
         <div className="flex flex-col items-center gap-4 text-center sm:gap-6">
           <FadeInSection>
-            <Badge variant="outline" className="animate-appear w-full sm:w-auto">
+            <Badge variant="outline" className="animate-appear w-full border-gray-700/15 drop-shadow-sm sm:w-auto">
+              <div className="bg-lime-600 rounded-full w-2 h-2">
+
+              </div>
               <span className="text-muted-foreground">
                 Early Access Available Now
               </span>
@@ -60,7 +63,7 @@ export default function Hero() {
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-lime-600 mb-3 sm:mb-4">
                   Sync, Partner, & Fulfill
                 </h1>
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-black dark:text-white mb-4 sm:mb-6">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-black mb-4 sm:mb-6">
                   Multi-Platform Inventory Sync & Shared Marketplace
                 </h2>
                 <p className="text-sm sm:text-base md:text-lg text-neutral-500 max-w-2xl mx-auto px-2 sm:px-0">
