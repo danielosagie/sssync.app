@@ -525,7 +525,7 @@ export function PricingTabs() {
             
             <div className="overflow-x-auto -mx-4 sm:mx-0">
             <div className="inline-block min-w-full sm:px-0 align-middle">
-                <table className="min-w-full border-collapse">
+                <table className="min-w-full border-collapse text-sm">
                 <thead>
                     <tr className="border-b-2 border-gray-200">
                     <th className="py-3 sm:py-4 px-4 sm:px-6 text-left font-bold text-sm sm:text-base"></th>
@@ -541,25 +541,25 @@ export function PricingTabs() {
                     </tr>
                     <tr className="border-b">
                     <td className="py-3 px-6">Pricing Model</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">Flat fee with usage tiers</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">Flat fee with usage tiers</td>
                     <td className="py-3 px-6 text-center">Split model (source vs destination)</td>
                     <td className="py-3 px-6 text-center">Order volume-based tiers</td>
                     </tr>
                     <tr className="border-b bg-slate-50">
                     <td className="py-3 px-6">Entry Price</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">$9.99/mo</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">$9.99/mo</td>
                     <td className="py-3 px-6 text-center">Free-$19/mo (source), $19/mo (destination)</td>
                     <td className="py-3 px-6 text-center">$35/mo</td>
                     </tr>
                     <tr className="border-b">
                     <td className="py-3 px-6">Products (Basic)</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">500</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">500</td>
                     <td className="py-3 px-6 text-center">25 (free) - 100 (starter)</td>
                     <td className="py-3 px-6 text-center">Not limited by product count</td>
                     </tr>
                     <tr className="border-b bg-slate-50">
                     <td className="py-3 px-6">Annual Savings</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">17%</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">17%</td>
                     <td className="py-3 px-6 text-center">Not specified</td>
                     <td className="py-3 px-6 text-center">None offered</td>
                     </tr>
@@ -570,49 +570,49 @@ export function PricingTabs() {
                     </tr>
                     <tr className="border-b bg-slate-50">
                     <td className="py-3 px-6">Platforms</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">Square + Clover + Amazon + Shopify (more coming soon)</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">Square + Clover + Amazon + Shopify (more coming soon)</td>
                     <td className="py-3 px-6 text-center">Shopify-to-Shopify</td>
                     <td className="py-3 px-6 text-center">18+ platforms supported</td>
                     </tr>
                     <tr className="border-b">
                     <td className="py-3 px-6">Sync Speed</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">Real-time (60 sec)</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">Real-time (60 sec)</td>
                     <td className="py-3 px-6 text-center">Basic &quot;Real-time&quot; (5-15 min)</td>
                     <td className="py-3 px-6 text-center">Basic &quot;Real-time&quot; (10-30 min)</td>
                     </tr>
                     <tr className="border-b bg-slate-50">
                     <td className="py-3 px-6">Full Product Data Sync</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">Included in all plans</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">Included in all plans</td>
                     <td className="py-3 px-6 text-center">Requires +$19/mo Product Settings add-on</td>
                     <td className="py-3 px-6 text-center">Included</td>
                     </tr>
                     <tr className="border-b">
                     <td className="py-3 px-6">Custom Field Mapping</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">Included in all plans</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">Included in all plans</td>
                     <td className="py-3 px-6 text-center">Limited without add-ons</td>
                     <td className="py-3 px-6 text-center">Basic only</td>
                     </tr>
                     <tr className="border-b bg-slate-50">
                     <td className="py-3 px-6">Bulk Import/Export</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">Included in all plans</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">Included in all plans</td>
                     <td className="py-3 px-6 text-center">Limited functionality</td>
                     <td className="py-3 px-6 text-center">Basic functionality</td>
                     </tr>
                     <tr className="border-b">
                     <td className="py-3 px-6">Order Sync</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">Included in all plans</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">Included in all plans</td>
                     <td className="py-3 px-6 text-center">Requires +$22/mo Order Sync add-on</td>
                     <td className="py-3 px-6 text-center">Included</td>
                     </tr>
                     <tr className="border-b bg-slate-50">
                     <td className="py-3 px-6">Sync History & Logs</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">Detailed in all plans</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">Detailed in all plans</td>
                     <td className="py-3 px-6 text-center">Basic only</td>
                     <td className="py-3 px-6 text-center">Basic only</td>
                     </tr>
                     <tr className="border-b">
                     <td className="py-3 px-6">Bundling & Kitting</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">Included in Pro+ plans</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">Included in Pro+ plans</td>
                     <td className="py-3 px-6 text-center">Not available</td>
                     <td className="py-3 px-6 text-center">Pro plan only (+$4/mo)</td>
                     </tr>
@@ -623,67 +623,67 @@ export function PricingTabs() {
                     </tr>
                     <tr className="border-b bg-slate-50">
                     <td className="py-3 px-6">Marketplace Integration</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">Built into all plans</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">Built into all plans</td>
                     <td className="py-3 px-6 text-center">Basic access, priority access for paid plans</td>
                     <td className="py-3 px-6 text-center">Not available</td>
                     </tr>
                     <tr className="border-b">
                     <td className="py-3 px-6">List Excess Inventory</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">All plans</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">All plans</td>
                     <td className="py-3 px-6 text-center">Basic functionality</td>
                     <td className="py-3 px-6 text-center">Not available</td>
                     </tr>
                     <tr className="border-b bg-slate-50">
                     <td className="py-3 px-6">Partner Matchmaking</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">With compatibility scoring</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">With compatibility scoring</td>
                     <td className="py-3 px-6 text-center">Basic partner finder only</td>
                     <td className="py-3 px-6 text-center">Not available</td>
                     </tr>
                     <tr className="border-b">
                     <td className="py-3 px-6">Marketplace Analytics</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">Comprehensive in all paid plans</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">Comprehensive in all paid plans</td>
                     <td className="py-3 px-6 text-center">Basic dashboard only</td>
                     <td className="py-3 px-6 text-center">Not available</td>
                     </tr>
                     <tr className="border-b bg-slate-50">
                     <td className="py-3 px-6">Partner Ratings System</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">Included in Pro+ plans</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">Included in Pro+ plans</td>
                     <td className="py-3 px-6 text-center">Not available</td>
                     <td className="py-3 px-6 text-center">Not available</td>
                     </tr>
                     <tr className="border-b">
                     <td className="py-3 px-6">Automated Order Routing</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">Included in Pro+ plans</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">Included in Pro+ plans</td>
                     <td className="py-3 px-6 text-center">Basic functionality only</td>
                     <td className="py-3 px-6 text-center">Not available</td>
                     </tr>
                     <tr className="border-b bg-slate-50">
                     <td className="py-3 px-6">Customizable Fulfillment Rules</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">Included in Pro+ plans</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">Included in Pro+ plans</td>
                     <td className="py-3 px-6 text-center">Not available</td>
                     <td className="py-3 px-6 text-center">Not available</td>
                     </tr>
                     <tr className="border-b">
                     <td className="py-3 px-6">Storefront Widget</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">Included in Business plan</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">Included in Business plan</td>
                     <td className="py-3 px-6 text-center">Not available</td>
                     <td className="py-3 px-6 text-center">Not available</td>
                     </tr>
                     <tr className="border-b bg-slate-50">
                     <td className="py-3 px-6">Partner Connections</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">3/15/Unlimited based on tier</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">3/15/Unlimited based on tier</td>
                     <td className="py-3 px-6 text-center">Unlimited but with complex pricing</td>
                     <td className="py-3 px-6 text-center">Limited to inventory sync only</td>
                     </tr>
                     <tr className="border-b">
                     <td className="py-3 px-6">Automated Payouts</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">Weekly/bi-weekly/daily by tier</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">Weekly/bi-weekly/daily by tier</td>
                     <td className="py-3 px-6 text-center">Requires +$9/mo Payouts add-on</td>
                     <td className="py-3 px-6 text-center">Not available</td>
                     </tr>
                     <tr className="border-b bg-slate-50">
                     <td className="py-3 px-6">API Access</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">Business plan</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">Business plan</td>
                     <td className="py-3 px-6 text-center">Not available</td>
                     <td className="py-3 px-6 text-center">Limited access</td>
                     </tr>
@@ -694,25 +694,25 @@ export function PricingTabs() {
                     </tr>
                     <tr className="border-b bg-slate-50">
                     <td className="py-3 px-6">Response Times</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">48h / 24h / 8h based on tier</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">48h / 24h / 8h based on tier</td>
                     <td className="py-3 px-6 text-center">72h standard</td>
                     <td className="py-3 px-6 text-center">48h standard</td>
                     </tr>
                     <tr className="border-b">
                     <td className="py-3 px-6">Dedicated Representative</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">Business plan</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">Business plan</td>
                     <td className="py-3 px-6 text-center">Enterprise only</td>
                     <td className="py-3 px-6 text-center">Not specified</td>
                     </tr>
                     <tr className="border-b bg-slate-50">
                     <td className="py-3 px-6">Add-on Fees</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">None - all features included</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">None - all features included</td>
                     <td className="py-3 px-6 text-center">$19/mo for Product Settings<br/>$22/mo for Order Sync<br/>$9/mo for Payouts</td>
                     <td className="py-3 px-6 text-center">$4/mo for Pro features</td>
                     </tr>
                     <tr className="border-b">
                     <td className="py-3 px-6">Fee Structure</td>
-                    <td className="py-3 px-6 text-center font-medium text-green-600">1.5% marketplace fee</td>
+                    <td className="py-3 px-6 text-center font-medium text-lime-600">1.5% marketplace fee</td>
                     <td className="py-3 px-6 text-center">Complex split between source/destination</td>
                     <td className="py-3 px-6 text-center">No marketplace capability</td>
                     </tr>

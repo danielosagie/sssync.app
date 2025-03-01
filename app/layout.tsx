@@ -21,13 +21,13 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://sssync.app' || 'https://www.sssync.app' || 'https://localhost:3000'),
-  title: "sssync - Inventory Marketplace",
+  title: "sssync - Inventory Sync & Marketplace",
   description: "The easiest way to sync inventory across your marketplaces & create your own shared inventory marketplace",
   icons: {
     icon: '/assets/favicon.ico',
   },
   openGraph: {
-    title: "sssync - Inventory Marketplace",
+    title: "sssync - Inventory Sync & Marketplace",
     description: "The easiest way to sync inventory across your marketplaces & create your own shared inventory marketplace",
     images: "/assets/landing_page_sssync.png",
   },

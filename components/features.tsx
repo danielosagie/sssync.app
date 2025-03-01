@@ -31,7 +31,7 @@ export function FeatureGrid({ title, subtitle, items, className }: FeatureGridPr
             <div key={`feature-${i}`} className="bg-card rounded-lg p-6 border shadow-sm">
               {item.icon && (
                 <div className="mb-4">
-                  <div className="h-16 w-fit p-4 rounded-md bg-lime-600/15 flex items-center justify-center">
+                  <div className="h-16 w-fit p-4 rounded-md bg-lime-600/30 flex items-center justify-center">
                     {item.icon}
                   </div>
                 </div>

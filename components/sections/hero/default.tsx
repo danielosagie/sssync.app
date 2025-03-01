@@ -18,7 +18,7 @@ import { FallbackImage } from "@/components/ui/fallback-image";
 
 function WorldMapDemo() {
   return (
-    <div className="py-40 dark:bg-black bg-white w-full">
+    <div className="py-40 bg-white w-full">
       {/* ... rest of WorldMapDemo implementation ... */}
     </div>
   );
@@ -93,7 +93,7 @@ export default function Hero() {
             </FadeInSection>
 
             <FadeInSection delay={0.3}>
-              <div className="py-6 sm:py-8 dark:bg-black bg-white w-full rounded-xl">
+              <div className="py-6 sm:py-8 bg-white w-full rounded-xl">
                 <WorldMap
                   lineColor="#65a30d"
                   dots={[
