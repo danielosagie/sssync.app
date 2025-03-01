@@ -25,10 +25,17 @@ export async function middleware(request: NextRequest) {
   // For all other routes, add security headers
   const response = NextResponse.next();
   
-  // Add permissive CSP headers for images
+  // Add comprehensive CSP headers that allow Fillout forms and analytics
   response.headers.set(
     'Content-Security-Policy',
-    "default-src 'self'; img-src 'self' data: https: http:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';"
+    "default-src 'self'; " +
+    "img-src 'self' data: https: http: blob:; " +
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://forms.fillout.com https://*.posthog.com https://*.vercel-insights.com https://*.vercel-analytics.com; " +
+    "style-src 'self' 'unsafe-inline' https://forms.fillout.com; " +
+    "connect-src 'self' https://*.posthog.com https://*.vercel-insights.com https://*.vercel-analytics.com https://forms.fillout.com; " +
+    "frame-src 'self' https://forms.fillout.com; " +
+    "font-src 'self' data:; " +
+    "media-src 'self';"
   );
   
   return response;
