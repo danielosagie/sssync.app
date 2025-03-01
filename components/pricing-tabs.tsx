@@ -186,10 +186,10 @@ export function PricingTabs() {
                 <p className="text-sm text-slate-500">Required for full product syncing</p>
               </div>
               
-              <div className="p-4 bg-green-50 rounded-lg">
+              <div className="p-4 bg-lime-50 rounded-lg">
                 <div className="flex items-center gap-2 mb-2">
                   <div className="flex gap-1">
-                    <span className="w-8 h-8 rounded bg-green-100 flex items-center justify-center">O</span>
+                    <span className="w-8 h-8 rounded bg-lime-100 flex items-center justify-center">O</span>
                   </div>
                   <span className="font-medium">Order Sync Add-on</span>
                 </div>
@@ -210,7 +210,7 @@ export function PricingTabs() {
               
               <div className="text-slate-600 uppercase text-sm font-medium mt-8 mb-2">WITH SSSYNC.APP</div>
               <div className="mb-2">
-                <span className="text-4xl font-bold text-green-600">$29.99</span>
+                <span className="text-4xl font-bold text-lime-600">$29.99</span>
                 <span className="text-sm ml-1 text-slate-600">/month</span>
               </div>
               <p className="text-sm text-slate-500">Pro Plan - all-inclusive</p>
@@ -232,7 +232,7 @@ export function PricingTabs() {
               <tr className="border-b-2 border-gray-200">
                 <th className="py-4 px-6 text-left font-bold">Features</th>
                 <th className="py-4 px-6 text-center font-bold">Basic Sync<br/><span className="font-normal text-sm">$9.99/mo</span></th>
-                <th className="py-4 px-6 text-center font-bold bg-green-50">Pro<br/><span className="font-normal text-sm">$29.99/mo</span></th>
+                <th className="py-4 px-6 text-center font-bold bg-lime-50">Pro<br/><span className="font-normal text-sm">$29.99/mo</span></th>
                 <th className="py-4 px-6 text-center font-bold">Business<br/><span className="font-normal text-sm">$79.99/mo</span></th>
               </tr>
             </thead>
@@ -243,19 +243,19 @@ export function PricingTabs() {
               <tr className="border-b">
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-sm whitespace-nowrap">Monthly Price</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">$9.99</td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50 font-medium">$29.99</td>
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50 font-medium">$29.99</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">$79.99</td>
               </tr>
               <tr className="border-b">
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-sm whitespace-nowrap">Annual Price (per month)</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">$8.29</td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50 font-medium">$24.99</td>
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50 font-medium">$24.99</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">$66.49</td>
               </tr>
               <tr className="border-b">
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-sm whitespace-nowrap">Marketplace Fee</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">1.5%</td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50 font-medium">1.5%</td>
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50 font-medium">1.5%</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">1.5%</td>
               </tr>
 
@@ -266,25 +266,25 @@ export function PricingTabs() {
               <tr className="border-b">
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-sm">Inventory Sync</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">Up to 500 SKUs</td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50">Up to 2,500 SKUs</td>
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50">Up to 2,500 SKUs</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">Unlimited SKUs</td>
               </tr>
               <tr className="border-b">
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-sm">Sync Frequency</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">Every 5 minutes</td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50">Real-time (60 sec)</td>
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50">Real-time (60 sec)</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">Real-time (60 sec)</td>
               </tr>
               <tr className="border-b">
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-sm">Partner Connections</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">Up to 3</td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50">Up to 15</td>
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50">Up to 15</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">Unlimited</td>
               </tr>
               <tr className="border-b">
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-sm">Order Offloading Limit</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">50 orders/month</td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50">500 orders/month</td>
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50">500 orders/month</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">Unlimited</td>
               </tr>
               
@@ -295,17 +295,17 @@ export function PricingTabs() {
               <tr className="border-b">
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-sm">Smart Order Routing</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-lime-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-lime-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-lime-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </td>
@@ -313,17 +313,17 @@ export function PricingTabs() {
               <tr className="border-b">
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-sm">Automated Contracts</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-lime-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-lime-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-lime-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </td>
@@ -331,17 +331,17 @@ export function PricingTabs() {
               <tr className="border-b">
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-sm">Automated Payouts</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-lime-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-lime-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-lime-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </td>
@@ -349,17 +349,17 @@ export function PricingTabs() {
               <tr className="border-b">
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-sm">Full Product Data Sync</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-lime-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-lime-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-lime-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </td>
@@ -371,13 +371,13 @@ export function PricingTabs() {
                     <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
                 </td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-lime-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-lime-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </td>
@@ -385,7 +385,7 @@ export function PricingTabs() {
               <tr className="border-b">
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-sm">AI Product Migration & Listing Creation</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">Basic (20/mo)</td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50">Pro (500/mo)</td>
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50">Pro (500/mo)</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">Business (500/mo)</td>
               </tr>
 
@@ -396,7 +396,7 @@ export function PricingTabs() {
               <tr className="border-b">
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-sm">Partner Matchmaking</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">Basic</td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50">Advanced with scoring</td>
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50">Advanced with scoring</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">Advanced with priority</td>
               </tr>
               <tr className="border-b">
@@ -406,13 +406,13 @@ export function PricingTabs() {
                     <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
                 </td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50">
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-red-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
                 </td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-lime-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </td>
@@ -420,13 +420,13 @@ export function PricingTabs() {
               <tr className="border-b">
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-sm">Marketplace Analytics</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">Basic</td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50">Comprehensive</td>
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50">Comprehensive</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">Advanced + Custom Reports</td>
               </tr>
               <tr className="border-b">
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-sm">Marketplace Priority</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">Standard</td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50">Priority</td>
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50">Priority</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">Premium Priority</td>
               </tr>
 
@@ -437,7 +437,7 @@ export function PricingTabs() {
               <tr className="border-b">
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-sm">Support Response Time</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">48 hours</td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50">24 hours</td>
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50">24 hours</td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">8 hours</td>
               </tr>
               <tr className="border-b">
@@ -447,13 +447,13 @@ export function PricingTabs() {
                     <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
                 </td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50">
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-red-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
                 </td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-lime-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </td>
@@ -465,13 +465,13 @@ export function PricingTabs() {
                     <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
                 </td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50">
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-red-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
                 </td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-lime-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </td>
@@ -483,13 +483,13 @@ export function PricingTabs() {
                     <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
                 </td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50">
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-red-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
                 </td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-lime-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </td>
@@ -501,13 +501,13 @@ export function PricingTabs() {
                     <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
                 </td>
-                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-green-50">
+                <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm bg-lime-50">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-red-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
                 </td>
                 <td className="py-2 sm:py-3 px-4 sm:px-6 text-center text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mx-auto text-lime-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
                 </td>
