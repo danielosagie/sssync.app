@@ -163,9 +163,11 @@ export default function Hero() {
                     alt="sssync.app dashboard previews"
                     width={1248}
                     height={765}
-                    className="rounded-md"
+                    quality={85}
                     priority={true}
                     debug={false}
+                    className="rounded-md"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </Mockup>
               </MockupFrame>

@@ -1,67 +1,66 @@
-# Next.js Multi-tenant Starter Template
+# sssync - Inventory Sync & Marketplace
 
-A minimalistic multi-tenant Next.js starter template with minimal setup and a modular design. Bring your own backend and database.
+## Overview
+sssync is a platform for syncing inventory across multiple marketplaces and creating shared inventory marketplaces. It provides real-time inventory management, order automation, and local partnership opportunities.
 
-[Demo](https://stack-template.vercel.app/)
-
-## Landing Page
-
-<div align="center">
-<img src="./assets/landing-page.png" alt="Teams" width="600"/>
-</div>
-
-## Dashboard
-
-<div align="center">
-<img src="./assets/dashboard-overview.png" alt="Teams" width="600"/>
-</div>
-
-## Multi-tenancy (Teams)
-
-<div align="center">
-<img src="./assets/team-switcher.png" alt="Teams" width="400"/>
-</div>
-
-## Account Settings
-
-<div align="center">
-<img src="./assets/account-settings.png" alt="Teams" width="500"/>
-</div>
+## Features
+- **Real-time inventory sync** across Shopify, Square, Clover, and Amazon
+- **Exclusive marketplace** for local partnerships
+- **Automated order management**
+- **Advanced analytics** for inventory and sales
 
 ## Getting Started
 
-1. Clone the repository
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
 
-    ```bash
-    git clone git@github.com:stack-auth/stack-template.git
-    ```
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/sssync.git
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Set up environment variables:
+   - Create a `.env` file in the root directory
+   - Add required variables for stack blitz auth but you won't need it for much else (e.g., `NEXT_PUBLIC_STACK_PROJECT_ID`, `STACK_SECRET_SERVER_KEY`, `NEXT_PUBLIC_STACK_PUBLISHABLE_CLIENT_KEY`) 
 
-2. Install dependencies
+### Running the Project
+- Development:
+  ```bash
+  npm run dev
+  ```
+- Production build:
+  ```bash
+  npm run build
+  npm start
+  ```
 
-    ```bash
-    npm install
-    ```
+## Tech Stack
+- **Frontend**: Next.js, TailwindCSS
+- **Backend**: Node.js, Vercel Edge Functions
+- **Analytics**: PostHog
+- **Forms**: Fillout
+- **Deployment**: Vercel
 
-3. Register an account on [Stack Auth](https://stack-auth.com), copy the keys from the dashboard, and paste them into the `.env.local` file. Then, enable "client team creation" on the team settings tab.
+## Tracking & Analytics
+- **PostHog** is used for tracking user interactions, including:
+  - CTA clicks
+  - Form completion times
+  - Waitlist signups
 
-    If you want to learn more about Stack Auth or self-host it, check out the [Docs](https://docs.stack-auth.com) and [GitHub](https://github.com/stack-auth/stack).
+## Contributing
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -m 'Add some feature'`)
+4. Push to the branch (`git push origin feature/YourFeature`)
+5. Open a pull request
 
-4. Start the development server and go to [http://localhost:3000](http://localhost:3000)
+## License
+MIT License. See `LICENSE` for more details.
 
-    ```bash
-    npm run dev 
-    ```
-
-## Features & Tech Stack
-
-- Next.js 14 app router
-- TypeScript
-- Tailwind & Shadcn UI
-- Stack Auth
-- Multi-tenancy (teams/orgs)
-- Dark mode
-
-## Inspired by
-
-- [Shadcn UI](https://github.com/shadcn-ui/ui)
-- [Shadcn Taxonomy](https://github.com/shadcn-ui/taxonomy)
+## Contact
+For support or inquiries, email support@sssync.app.

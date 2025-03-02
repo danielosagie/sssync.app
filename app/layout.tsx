@@ -13,6 +13,8 @@ import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "@/app/api/uploadthing/core";
 import Script from "next/script";
 import { PHProvider } from '@/components/posthog-provider'
+import dynamic from 'next/dynamic'
+import { Skeleton } from '@/components/ui/skeleton'
 
 const inter = Inter({
   subsets: ['latin'],
