@@ -163,7 +163,7 @@ export default function Hero() {
                     alt="sssync.app dashboard previews"
                     width={1248}
                     height={765}
-                    quality={85}
+                    quality={100}
                     priority={true}
                     debug={false}
                     className="rounded-md"
