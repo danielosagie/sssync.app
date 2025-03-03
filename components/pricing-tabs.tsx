@@ -246,7 +246,7 @@ export function PricingTabs() {
             <thead>
               <tr className="border-b-2 border-gray-200">
                 <th className="py-4 px-6 text-left font-bold">Features</th>
-                <th className="py-4 px-6 text-center font-bold">Basic Sync<br/><span className="font-normal text-sm">$9.99/mo</span></th>
+                <th className="py-4 px-6 text-center font-bold">Basic<br/><span className="font-normal text-sm">$9.99/mo</span></th>
                 <th className="py-4 px-6 text-center font-bold bg-lime-50">Pro<br/><span className="font-normal text-sm">$29.99/mo</span></th>
                 <th className="py-4 px-6 text-center font-bold">Business<br/><span className="font-normal text-sm">$79.99/mo</span></th>
               </tr>
