@@ -11,6 +11,15 @@ export const config = {
 };
 
 export async function middleware(request: NextRequest) {
+  const hostname = request.headers.get('host') || '';
+  
+  // Add apex to www redirect ONLY for the apex domain
+  if (hostname === 'sssync.app') {
+    const url = request.nextUrl.clone();
+    url.hostname = 'www.sssync.app';
+    return NextResponse.redirect(url);
+  }
+  
   // Check if this is the /welcome route
   if (request.nextUrl.pathname === '/welcome') {
     try {
