@@ -42,19 +42,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={inter.className}>
-      {/* Google tag (gtag.js) */}
+      {/* Google tag (gtag.js) - placed directly in html */}
       <Script
-        strategy="afterInteractive"
+        id="google-tag-manager"
+        strategy="beforeInteractive"
         src="https://www.googletagmanager.com/gtag/js?id=AW-16906739352"
       />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'AW-16906739352');
-        `}
-      </Script>
+      <Script
+        id="google-analytics"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16906739352');
+          `,
+        }}
+      />
       
       <NextSSRPlugin
         routerConfig={extractRouterConfig(ourFileRouter)}
