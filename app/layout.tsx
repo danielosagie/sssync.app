@@ -42,37 +42,37 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={inter.className}>
-      <head>
-        <NextSSRPlugin
-          routerConfig={extractRouterConfig(ourFileRouter)}
-        />
-        <Script id="media-session-fix">
-          {`
-            window.MediaSession = window.MediaSession || {};
-            window.MediaSession.prototype = window.MediaSession.prototype || {};
-            window.MediaSession.prototype.setActionHandler = window.MediaSession.prototype.setActionHandler || function() {};
-          `}
-        </Script>
-        <link rel="preconnect" href="https://ufs.sh" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://ufs.sh" />
-        <Script src="https://critical-script.com/script.js" strategy="beforeInteractive" />
-        <Script src="https://analytics.com/script.js" strategy="afterInteractive" />
-        <Script src="https://non-critical.com/script.js" strategy="lazyOnload" />
-        {/* Google tag (gtag.js) */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16906739352"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-16906739352');
-          `}
-        </Script>
-      </head>
+      {/* Google tag (gtag.js) */}
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=AW-16906739352"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-16906739352');
+        `}
+      </Script>
+      
+      <NextSSRPlugin
+        routerConfig={extractRouterConfig(ourFileRouter)}
+      />
+      <Script id="media-session-fix">
+        {`
+          window.MediaSession = window.MediaSession || {};
+          window.MediaSession.prototype = window.MediaSession.prototype || {};
+          window.MediaSession.prototype.setActionHandler = window.MediaSession.prototype.setActionHandler || function() {};
+        `}
+      </Script>
+      <link rel="preconnect" href="https://ufs.sh" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="https://ufs.sh" />
+      <Script src="https://critical-script.com/script.js" strategy="beforeInteractive" />
+      <Script src="https://analytics.com/script.js" strategy="afterInteractive" />
+      <Script src="https://non-critical.com/script.js" strategy="lazyOnload" />
+
       <body>
         <Analytics />
         <PHProvider>
