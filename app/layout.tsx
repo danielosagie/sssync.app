@@ -12,9 +12,9 @@ import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "@/app/api/uploadthing/core";
 import Script from "next/script";
-import { PHProvider } from '@/components/posthog-provider'
-import dynamic from 'next/dynamic'
-import { Skeleton } from '@/components/ui/skeleton'
+import { PHProvider } from '@/components/posthog-provider';
+import dynamic from 'next/dynamic';
+import { Skeleton } from '@/components/ui/skeleton';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -59,6 +59,19 @@ export default function RootLayout({
         <Script src="https://critical-script.com/script.js" strategy="beforeInteractive" />
         <Script src="https://analytics.com/script.js" strategy="afterInteractive" />
         <Script src="https://non-critical.com/script.js" strategy="lazyOnload" />
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16906739352"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16906739352');
+          `}
+        </Script>
       </head>
       <body>
         <Analytics />
