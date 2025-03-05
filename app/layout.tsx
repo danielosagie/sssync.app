@@ -1,4 +1,3 @@
-import { Header } from "@/components/header";
 import { StackProvider, StackTheme } from "@stackframe/stack";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -13,8 +12,6 @@ import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "@/app/api/uploadthing/core";
 import Script from "next/script";
 import { PHProvider } from '@/components/posthog-provider';
-import dynamic from 'next/dynamic';
-import { Skeleton } from '@/components/ui/skeleton';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -42,7 +39,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={inter.className}>
-      {/* Google tag (gtag.js) - placed directly in html */}
       <Script
         id="google-tag-manager"
         strategy="beforeInteractive"
