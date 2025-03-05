@@ -12,6 +12,7 @@ import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "@/app/api/uploadthing/core";
 import Script from "next/script";
 import { PHProvider } from '@/components/posthog-provider';
+import { GoogleTagManager } from '@next/third-parties/google' 
 
 const inter = Inter({
   subsets: ['latin'],
@@ -39,27 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={inter.className}>
-      <Script
-        id="google-tag-manager"
-        strategy="beforeInteractive"
-        src="https://www.googletagmanager.com/gtag/js?id=AW-16906739352"
-      />
-      <Script
-        id="google-analytics"
-        strategy="beforeInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-16906739352');
-          `,
-        }}
-      />
-      
-      <NextSSRPlugin
-        routerConfig={extractRouterConfig(ourFileRouter)}
-      />
+      <GoogleTagManager gtmId="GTM-PPD2JL8C" />
       <Script id="media-session-fix">
         {`
           window.MediaSession = window.MediaSession || {};
@@ -75,6 +56,9 @@ export default function RootLayout({
       <Script src="https://non-critical.com/script.js" strategy="lazyOnload" />
 
       <body>
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPD2JL8C"
+        height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe></noscript>
+      
         <Analytics />
         <PHProvider>
           <PostHogProviderWrapper>
