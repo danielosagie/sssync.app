@@ -40,6 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={inter.className}>
+
       <GoogleTagManager gtmId="GTM-PPD2JL8C" />
       <Script id="media-session-fix">
         {`
@@ -55,7 +56,10 @@ export default function RootLayout({
       <Script src="https://analytics.com/script.js" strategy="afterInteractive" />
       <Script src="https://non-critical.com/script.js" strategy="lazyOnload" />
 
+      
+
       <body>
+        
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PPD2JL8C"
         height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe></noscript>
       
@@ -66,6 +70,7 @@ export default function RootLayout({
               <StackProvider app={stackServerApp}>
                 <StackTheme>
                   {children}
+                  <GoogleTagManager gtmId="GTM-PPD2JL8C" />
                   <SpeedInsights />
                 </StackTheme>
               </StackProvider>
