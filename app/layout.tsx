@@ -70,7 +70,6 @@ export default function RootLayout({
               <StackProvider app={stackServerApp}>
                 <StackTheme>
                   {children}
-                  <GoogleTagManager gtmId="GTM-PPD2JL8C" />
                   <SpeedInsights />
                 </StackTheme>
               </StackProvider>

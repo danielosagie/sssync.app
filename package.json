@@ -37,7 +37,7 @@
     "js-cookie": "^3.0.5",
     "lucide-react": "^0.475.0",
     "motion": "^12.0.0-alpha.2",
-    "next": "15.1.7",
+    "next": "^15.2.1",
     "next-themes": "^0.2.1",
     "postcss": "^8.4.31",
     "posthog-js": "^1.224.1",
