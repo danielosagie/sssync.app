@@ -21,7 +21,7 @@ import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 
 function useSegment(basePath: string) {
   const path = usePathname();
-  const result = path.slice(basePath.length, path.length);
+  const result = path?.slice(basePath.length, path.length) || "/";
   return result ? result : "/";
 }
 

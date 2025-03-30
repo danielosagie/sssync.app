@@ -1,8 +1,7 @@
 "use client";
 
-import { useRef } from "react";
-import { motion } from "motion/react";
-import DottedMap from "dotted-map";
+import { useRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 
@@ -19,16 +18,8 @@ export function WorldMap({
   lineColor = "#0ea5e9",
 }: MapProps) {
   const svgRef = useRef<SVGSVGElement>(null);
-  const map = new DottedMap({ height: 100, grid: "diagonal" });
-
   const { theme } = useTheme();
-
-  const svgMap = map.getSVG({
-    radius: 0.22,
-    color: theme === "dark" ? "#FFFFFF40" : "#00000040",
-    shape: "circle",
-    backgroundColor: theme === "dark" ? "black" : "white",
-  });
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const projectPoint = (lat: number, lng: number) => {
     const x = (lng + 180) * (800 / 360);
@@ -46,20 +37,36 @@ export function WorldMap({
   };
 
   return (
-    <div className="w-full aspect-[2/1] bg-white rounded-lg  relative font-sans">
+    <div className="relative w-full h-[495px] bg-gray-50">
+      {/* Placeholder that shows immediately */}
+      {!isLoaded && (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-16 h-16 border-4 border-lime-600 border-t-transparent rounded-full animate-spin"></div>
+        </div>
+      )}
+      
+      {/* WebP image for better performance */}
       <Image
-        src={`data:image/svg+xml;utf8,${encodeURIComponent(svgMap)}`}
-        className="h-full w-full [mask-image:linear-gradient(to_bottom,transparent,white_10%,white_90%,transparent)] pointer-events-none select-none"
-        alt="world map"
-        height="495"
-        width="1056"
-        draggable={false}
+        src={theme === "dark" 
+          ? "/assets/world-map-dark.webp" 
+          : "/assets/world-map-light.webp"}
+        alt="World map"
+        width={1056}
+        height={495}
+        quality={90}
+        priority={true}
+        onLoadingComplete={() => setIsLoaded(true)}
+        className={`h-full w-full object-cover transition-opacity duration-500 ${
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
       />
+
       <svg
         ref={svgRef}
         viewBox="0 0 800 400"
         className="w-full h-full absolute inset-0 pointer-events-none select-none"
       >
+        {/* Path animations */}
         {dots.map((dot, i) => {
           const startPoint = projectPoint(dot.start.lat, dot.start.lng);
           const endPoint = projectPoint(dot.end.lat, dot.end.lng);
@@ -96,6 +103,7 @@ export function WorldMap({
           </linearGradient>
         </defs>
 
+        {/* Dot animations */}
         {dots.map((dot, i) => (
           <g key={`points-group-${i}`}>
             <g key={`start-${i}`}>

@@ -87,12 +87,6 @@ export function FAQ() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-10">
-              <AccordionTrigger>Is there a limit to how many partner stores I can connect with?</AccordionTrigger>
-              <AccordionContent>
-                The number of partner connections depends on your plan. Free tier users can connect with up to 2 partners, Pro Marketplace users can connect with up to 30, and Enterprise users have unlimited connections. You can always upgrade your plan as your network grows.
-              </AccordionContent>
-            </AccordionItem>
           </Accordion>
         </div>
       </FadeInSection>

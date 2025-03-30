@@ -1,45 +1,22 @@
 //import { useState } from "react";
 import { FeatureGrid } from "@/components/features";
 //import { Hero } from "@/components/hero";
-import { PricingGrid } from "@/components/pricing";
 import { stackServerApp } from "../../stack";
 import { 
-  BarChartIcon, 
-  LayersIcon, 
   ReaderIcon, 
   StarIcon,
-  DrawingPinIcon,
-  ComponentInstanceIcon,
-  RocketIcon,
-  CheckCircledIcon,
 } from "@radix-ui/react-icons";
 import { 
-  Calendar,
-  RefreshCw,
-  Rocket,
-  CheckCircle2,
-  XCircle,
-  BarChart,
-  Share2,
-  Wallet,
+
   GitFork,
   Truck,
   ShoppingBag,
 } from "lucide-react";
 import Hero from "@/components/sections/hero/default";
 import { FadeInSection } from "@/components/ui/fade-in-section";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Section } from "@/components/ui/section";
-import { UpdateIcon } from "@radix-ui/react-icons";
-import { cookies } from "next/headers";
-import { OrbitingCircles } from "@/components/magicui/orbiting-circles";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Image from 'next/image';
 import dynamic from 'next/dynamic'
 import { Skeleton } from "@/components/ui/skeleton";
 import { Suspense } from "react";
-import { WhyChooseSection } from "@/components/sections/whychooseus";
 import { FallbackImage } from '@/components/ui/fallback-image';
 
 // Lazy load components that are below the fold
@@ -76,31 +53,6 @@ async function LandingPage() {
   return (
     <>
       <Hero />
-      {/* 
-      <Hero
-        capsuleText="100% Open-source & Free"
-        capsuleLink="https://stacktemplate.com"
-        title="A Multi-tenant Next.js Starter Template"
-        subtitle="Built for developers, by developers. Next.js + Shadcn UI + Stack Auth."
-        primaryCtaText="Get Started"
-        primaryCtaLink={stackServerApp.urls.signUp}
-        secondaryCtaText="GitHub"
-        secondaryCtaLink="https://github.com/stack-auth/stack-template"
-        credits={
-          <>
-            Crafted with ❤️ by{" "}
-            <a
-              href="https://stack-auth.com"
-              target="_blank"
-              rel="noreferrer"
-              className="underline"
-            >
-              Stack Auth
-            </a>
-          </>
-        }
-      />
-      */}
 
       <div id="features" />
       <FadeInSection>
